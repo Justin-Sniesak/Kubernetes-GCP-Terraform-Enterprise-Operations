@@ -1,5 +1,5 @@
 ## Scope
-This project covers all projects, tasks, and troubleshooting in preperation for obtaining the KCNA. 
+This repo covers all projects, tasks, and troubleshooting in preperation for obtaining the KCNA. 
 
 ## Environment
 - Kubernetes: v1.33.1
