@@ -5,7 +5,6 @@ This project covers all projects, tasks, and troubleshooting in preperation for 
 - Kubernetes: v1.33.1
 - kubectl: 1.33.4
 - Operating System: Ubuntu 24.0.3 LTS
-- YAML manifests 
 
 ```
 ├── README.md
