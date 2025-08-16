@@ -67,13 +67,13 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![PM1-4](Pods_Manifests/PM1-4.jpg)
 - 08162025 Troubleshooting of the wrong image being defined in the manifest.
   ![PM1-5](Pods_Manifests/PM1-5.jpg)
-  - 08162025 Troubleshooting of the incorrect image version being defined in the manifest.
+- 08162025 Troubleshooting of the incorrect image version being defined in the manifest.
   ![PM1-6](Pods_Manifests/PM1-6.jpg)
-  - 08162025 Describe running pods and review applicable details, speficially start process for all three.
+- 08162025 Describe running pods and review applicable details, speficially start process for all three.
   ![PM1-7](Pods_Manifests/PM1-7.jpg)
-  - 08162025 Create manifest for all three pods, start them, confirm 3/3 are now running on the node.
+- 08162025 Create manifest for all three pods, start them, confirm 3/3 are now running on the node.
   ![PM1-8](Pods_Manifests/PM1-8.jpg)
-  - 08162025 Delete all three pods then validate they are gone on the node.
+- 08162025 Delete all three pods then validate they are gone on the node.
   ![PM1-9](Pods_Manifests/PM1-9.jpg)
 
   
