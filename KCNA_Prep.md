@@ -47,13 +47,13 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 ## Minikube
 - 08122025 Install Minikube.
   ![MK1-1](Minikube/MK1-1.jpg)
-- 08122025 Start cluster and Minikube version check.
+- 08122025 Start cluster and Minikube version validation.
   ![MK1-2](Minikube/MK1-2.jpg)
-- 08122025 Validate cluster is running, stop the cluster, then delete.
+- 08122025 Validate the cluster is running, stop the cluster, then delete.
   ![MK1-3](Minikube/MK1-3.jpg)
-- 08142025 Install kubectl, start the cluster, check thje cluster info, check the kubectl version.
+- 08142025 Install kubectl, start the cluster, validate cluster info, validate kubectl version.
   ![MK1-4](Minikube/MK1-4.jpg)
-- 08162025 Determine Minikube is not launching because it is not started, and when it is starting starting with too much memory allocated.
+- 08162025 Determined Minikube is not launching because it is not started, and when it is starting it is starting with too much memory allocated.
   ![MK1-5](Minikube/MK1-5.jpg)
 - 08162025 Fix Minikube not starting, reduce memory allocation create pod, create nginx pod.
   ![MK1-6](Minikube/MK1-6.jpg)
@@ -67,11 +67,11 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 ## Pods & Manifests
 - 08162025 Validate running pods on the node and then review pod details.
   ![PM1-1](Pods_Manifests/PM1-1.jpg)
-- 08162025 Delete the pod and confirm it is no longer running on the node.
+- 08162025 Delete the pod and validate no longer running on the node.
   ![PM1-2](Pods_Manifests/PM1-2.jpg)
-- 08162025 Create manifest then validate both spacing and contents are correct.
+- 08162025 Create the manifest then validate both spacing and contents are correct.
   ![PM1-3](Pods_Manifests/PM1-3.jpg)
-- 08162025 Troubleshooting of pods not starting due to being in a crash loop.
+- 08162025 Troubleshooting of pods not starting due to crash loop.
   ![PM1-4](Pods_Manifests/PM1-4.jpg)
 - 08162025 Troubleshooting of the wrong image being defined in the manifest.
   ![PM1-5](Pods_Manifests/PM1-5.jpg)
@@ -79,7 +79,7 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![PM1-6](Pods_Manifests/PM1-6.jpg)
 - 08162025 Describe running pods and review applicable details, speficially start process for all three.
   ![PM1-7](Pods_Manifests/PM1-7.jpg)
-- 08162025 Create manifest for all three pods, start them, confirm 3/3 are now running on the node.
+- 08162025 Create a manifest for all three pods, start them, validate 3/3 are now running on the node.
   ![PM1-8](Pods_Manifests/PM1-8.jpg)
 - 08162025 Delete all three pods then validate they are gone on the node.
   ![PM1-9](Pods_Manifests/PM1-9.jpg)
