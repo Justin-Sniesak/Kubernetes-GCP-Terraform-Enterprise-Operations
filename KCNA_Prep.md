@@ -2,7 +2,7 @@
 This repo covers all projects, tasks, and troubleshooting in preperation for obtaining the KCNA. 
 
 ## Environment
-- Kubernetes: v1.33.1
+- Minikube: v1.33.1
 - kubectl: 1.33.4
 - Operating System: Ubuntu 24.0.3 LTS
 - YAML for manifests
