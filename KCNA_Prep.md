@@ -117,6 +117,6 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![Dep1-2](Deployments/Dep1-2.jpg)
   - 08172025 Validate replicas are auto-scaling to the correct amount as intended per deployment specifications.
   ![Dep1-3](Deployments/Dep1-3.jpg)
- - 08172025 Validate all components of the new deployment are present, running, and in the intended state.
+  - 08172025 Validate all components of the new deployment are present, running, and in the intended state.
   ![Dep1-4](Deployments/Dep1-4.jpg)
   
