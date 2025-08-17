@@ -97,7 +97,7 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![RS1-5](Replicasets/RS1-5.jpg)
 - 08172025 Check the details of the Replicaset, specifically checking for both replica and pod counts.  
   ![RS1-6](Replicasets/RS1-6.jpg)
-- 08172025 Edit the Replicaset manifest, scale the number of replicas to 4, confirm the fourth pod has been started, and is now running.
+- 08172025 Edit the Replicaset manifest, scale the number of replicas to 4, confirm the fourth pod has been started, and is now running.  
   ![RS1-7](Replicasets/RS1-7.jpg)
 - 08172025 Scale down the number of replicas to 2, without editing the manifest (using CLI syntax), then validate that only two pods are running.  
   ![RS1-8](Replicasets/RS1-8.jpg)
