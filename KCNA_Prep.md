@@ -43,6 +43,14 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 |   |   └── Creation and validation through Replicaset
 |   |   └── Deletion and validation through Replicaset
 |   |   └── Scale up/down via Replicaset
+├── Deployments
+│   ├── Manifests
+|   |   └── Creation deployment manifest, deployment, pods
+│   ├── Deployments
+|   |   └── Validate deployments
+|   |   └── Create deployment manifest, deployment, pods
+|   |   └── Validate replica scaling
+|   |   └── Validate all deployment components
 ```
 ## Minikube
 - 08122025 Install Minikube.
@@ -102,5 +110,13 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 - 08172025 Scale down the number of replicas to 2, without editing the manifest (using CLI syntax), then validate that only two pods are running.  
   ![RS1-8](Replicasets/RS1-8.jpg)
   
-  
+  ## Deployments
+  - 08172025 Create new deployment manifest, create the deployment, validate the pod status.
+  ![Dep1-1](Deployments/Dep1-1.jpg)
+  - 08172025 Validate the details of the newly created deployment.
+  ![Dep1-2](Deployments/Dep1-2.jpg)
+  - 08172025 Validate replicas are auto-scaling to the correct amount as intended per deployment specifications.
+  ![Dep1-3](Deployments/Dep1-3.jpg)
+ - 08172025 Validate all components of the new deployment are present, running, and in the intended state.
+  ![Dep1-4](Deployments/Dep1-4.jpg)
   
