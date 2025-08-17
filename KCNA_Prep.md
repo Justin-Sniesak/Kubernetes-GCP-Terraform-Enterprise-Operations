@@ -36,6 +36,13 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 |   |   └── Create manifest then start pods
 |   |   └── Review details of pods after confirming running
 |   |   └── Delete pods and confirm gone
+├── ReplicaSets
+│   ├── Manifests
+|   |   └── Creation and modification for ReplicaSets and Pods
+│   ├── Pods 
+|   |   └── Creation and validation through Replicaset
+|   |   └── Deletion and validation through Replicaset
+|   |   └── Scale up/down via Replicaset
 ```
 ## Minikube
 - 08122025 Install Minikube.
@@ -77,4 +84,23 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 - 08162025 Delete all three pods then validate they are gone on the node.
   ![PM1-9](Pods_Manifests/PM1-9.jpg)
 
+## Replicasets
+- 08172025 ReplicaSet manifest created in Visual Studio Code, validate accesible through bash shell locally.
+  ![RS1-1](Replicasets/RS1-1.jpg)
+- 08172025 Create ReplicaSet manifest in bash, then validate the correct number of pods are started running in a healthy state.
+  ![RS1-2](Replicasets/RS1-2.jpg)
+- 08172025 Create new pod manifest in Visual Studio Code, validate available in bash, to be used with Replicaset testing.
+  ![RS1-3](Replicasets/RS1-3.jpg)
+- 08172025 Confirm correct number of pods defined in the Replicaset are running.
+  ![RS1-4](Replicasets/RS1-4.jpg)
+- 08172025 Delete a pod, then validate the Replicaset created and started new pod, validate 3/3 are running, so HA is functioning as intended.
+  ![RS1-5](Replicasets/RS1-5.jpg)
+- 08172025 Check the details of the Replicaset, specifically checking for both replica and pod counts.
+  ![RS1-6](Replicasets/RS1-6.jpg)
+- 08172025 Edit the Replicaset manifest, scale the number of replicas to 4, confirm the fourth pod has been started, and is now running.
+  ![RS1-7](Replicasets/RS1-7.jpg)
+- 08172025 Scale down the number of replicas to 2, without editing the manifest (using CLI syntax), then validate that only two pods are running.
+  ![RS1-8](Replicasets/RS1-8.jpg)
+  
+  
   
