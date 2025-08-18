@@ -12,48 +12,48 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 ├── README.md
 ├── Minikube
 │   ├── Installation
-|   |   └── Install Minikube locally
+│   │   └── Install Minikube locally
 │   ├── Create, validate, destroy
-|   |   └── Start cluster and Minikube version check
-|   |   └── Stop the cluster
+│   │   ├── Start cluster and check Minikube version
+│   │   └── Stop the cluster
 │   ├── Install, test and validate kubectl
-|   |   └── Install kubectl, validate by checking cluster info, check locally installed version
-│   ├── Troubleshooting
-|   |   └── Troubleshoot and correct not starting; correct memory allocated
+│   │   └── Install kubectl, validate cluster info, check version
+│   └── Troubleshooting
+│       └── Fix startup issues and adjust memory allocation
 ├── Docker
 │   ├── Installation
-|   |   └── Install Docker locally, confirm Hello World container launches and can SSH
-│   ├── Version
-|   |   └── Validate locally installed version
+│   │   └── Install Docker locally, confirm Hello World container launches and SSH access
+│   └── Version
+│       └── Validate installed Docker version
 ├── Pods & Manifests
 │   ├── Pods
-|   |   └── Manual creation, deletion and validation 
+│   │   └── Manual creation, deletion, and validation 
 │   ├── Manifests
-|   |   └── Creation and review for YAML syntax errors
+│   │   └── Create manifests and check YAML syntax
 │   ├── Troubleshooting
-|   |   └── Troubleshoot and correct issues related to restart loops, incorrect image in manifest, incorrect image version in manifest
-│   ├── Manifest pod creation
-|   |   └── Create manifest then start pods
-|   |   └── Review details of pods after confirming running
-|   |   └── Delete pods and confirm gone
+│   │   └── Fix restart loops, incorrect images, or version issues
+│   └── Manifest pod creation
+│       ├── Create manifest and start pods
+│       ├── Review pod details after confirming running
+│       └── Delete pods and confirm removal
 ├── ReplicaSets
 │   ├── Manifests
-|   |   └── Creation and modification for ReplicaSets and Pods
-│   ├── Pods 
-|   |   └── Creation and validation through Replicaset
-|   |   └── Deletion and validation through Replicaset
-|   |   └── Scale up/down via Replicaset
-├── Deployments
-│   ├── Manifests
-|   |   └── Creation deployment manifest, deployment, pods
-│   ├── Testing, scale up, scale down, rollouts and rollbacks
-|   |   └── Validate deployments
-|   |   └── Create deployment manifest, deployment, pods
-|   |   └── Validate replica scaling
-|   |   └── Validate all deployment components
-|   |   └── Deployment testing, rollouts and rollbacks
-|   |   └── Deployment direct versioning updates
-|   |   └── Further deployment scale up/down, testing and direct versioning updates
+│   │   └── Create and modify ReplicaSets and Pods
+│   └── Pods 
+│       ├── Create and validate via ReplicaSet
+│       ├── Delete and validate via ReplicaSet
+│       └── Scale up/down via ReplicaSet
+└── Deployments
+    ├── Manifests
+    │   └── Create deployment manifests and pods
+    └── Testing, scale up, scale down, rollouts and rollbacks
+        ├── Validate deployments
+        ├── Create deployment manifests and pods
+        ├── Validate replica scaling
+        ├── Validate all deployment components
+        ├── Deployment testing, rollouts, and rollbacks
+        ├── Deployment version updates
+        └── Further deployment scale up/down, testing, and version updates
 ```
 ## Minikube
 - 08122025 Install Minikube.
