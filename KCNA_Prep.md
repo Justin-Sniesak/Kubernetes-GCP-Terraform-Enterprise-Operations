@@ -122,4 +122,18 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![Dep1-3](Deployments/Dep1-3.jpg)
 - 08172025 Validate all components of the new deployment are present, running, and in the intended state.
   ![Dep1-4](Deployments/Dep1-4.jpg)
+- 08172025 Delete the current deployment, scale up replicas to desired count, create a new deployment, validate both the replica count and deployment health.
+  ![Dep1-5](Deployments/Dep1-5.jpg)
+- 08172025 Delete the current deployment, create and rollout a new deployment, validate 6/6 pods are up and healthy.
+  ![Dep1-6](Deployments/Dep1-6.jpg)
+- 08172025 Create and annotate new deployment, roll it out, check the history and confirm the change-cause annotation is logged.
+  ![Dep1-7](Deployments/Dep1-7.jpg)
+- 08172025 Validate the change-cause is annotated when describing the deployment.
+  ![Dep1-8](Deployments/Dep1-8.jpg)
+- 08172025 Update the deployment manifest to a different image version, annotate the change-cause, rollout the deployment, then validate the deployment history.  
+  ![Dep1-9](Deployments/Dep1-9.jpg)
+- 08172025 Validate the scaling of replicas in the deployment manifest.
+  ![Dep1-10](Deployments/Dep1-10.jpg)
+- 08172025 Downgrade to version 3.21, validate this failed, rollback to version 3.22, validate change-cause annotations, validate the deployment, validate the number of pods and their health.
+  ![Dep1-11](Deployments/Dep1-11.jpg)
   
