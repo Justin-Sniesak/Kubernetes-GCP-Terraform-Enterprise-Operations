@@ -51,6 +51,9 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 |   |   └── Create deployment manifest, deployment, pods
 |   |   └── Validate replica scaling
 |   |   └── Validate all deployment components
+|   |   └── Deployment testing, rollouts and rollbacks
+|   |   └── Deployment direct versioning updates
+|   |   └── Further deployment scale up/down, testing and direct versioning updates
 ```
 ## Minikube
 - 08122025 Install Minikube.
