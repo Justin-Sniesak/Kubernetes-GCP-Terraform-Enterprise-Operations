@@ -46,7 +46,7 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 ├── Deployments
 │   ├── Manifests
 |   |   └── Creation deployment manifest, deployment, pods
-│   ├── Deployments
+│   ├── Testing, scale up, scale down, rollouts and rollbacks
 |   |   └── Validate deployments
 |   |   └── Create deployment manifest, deployment, pods
 |   |   └── Validate replica scaling
