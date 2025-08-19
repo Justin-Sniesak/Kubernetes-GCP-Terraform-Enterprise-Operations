@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app1-deployment
+  labels:
+    tier: OS
+    app: alpine 
+spec:
+  selector: 
+    matchLabels:
+      app: app1
+  replicas: 6
+  template:
+    metadata: 
+      name: alpine
+      labels:  
+        app: app1
+    spec:
+      containers:
+        - name: alpine
+          image: alpine:latest
+          command: ["sleep", "infinity"]
+        - name: python
+          image: python:alpine3.22
+          command: ["sleep", "infinity"]
+        - name: redis
+          image: redis:latest
