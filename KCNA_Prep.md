@@ -10,6 +10,7 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 
 ```
 ├── README.md
+├── Manifests (All manifests are stored here)
 ├── Minikube
 │   ├── Installation
 │   │   └── Install Minikube locally
