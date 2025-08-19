@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpine-2
+  labels:
+    app: app1
+spec:
+  containers:
+    - name: alpine2
+      image: alpine:latest
+      command: ["sleep", "infinity"]
+  
+  affinity:
+    nodeAffinity: 
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: size
+            operator: NotIn 
+            values:
+            - Large
