@@ -143,3 +143,5 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![Dep1-13](Deployments/Dep1-13.jpg)
 - 08192025 Validate the image version has been rolled back to the desired version.
   ![Dep1-14](Deployments/Dep1-14.jpg)
+- 08192025 Validate the replica count is correct by describing the deployment.
+  ![Dep1-15](Deployments/Dep1-15.jpg)
