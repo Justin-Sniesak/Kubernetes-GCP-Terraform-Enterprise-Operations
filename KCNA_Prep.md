@@ -139,3 +139,5 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![Dep1-11](Deployments/Dep1-11.jpg)
 - 08192025 Update the deployment manifest with an image version that does not exist, confirm the rollout produces an error, confirm the number of pods up is 6 as expected and the other 3 are in a broken state due to trying to pull an image version that does not exist off DockerHub.
   ![Dep1-12](Deployments/Dep1-12.jpg)
+- 08192025 Rollback deployment, confirm the pods terminated and the correct amount of replicas are now running.
+  ![Dep1-13](Deployments/Dep1-13.jpg)
