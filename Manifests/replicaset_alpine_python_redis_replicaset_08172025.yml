@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: app1-replicaset
+  labels:
+    app: app1
+    function: os
+spec:
+  replicas: 4
+  selector: 
+    matchLabels:
+      app: app1
+  template:
+    metadata: 
+      name: alpine
+      labels:  
+        app: app1
+        function: os
+    spec:
+      containers:
+        - name: alpine
+          image: alpine:latest
+          command: ["sleep", "infinity"]
+        - name: python
+          image: python:alpine3.22
+          command: ["sleep", "infinity"]
+        - name: redis
+          image: redis:latest
