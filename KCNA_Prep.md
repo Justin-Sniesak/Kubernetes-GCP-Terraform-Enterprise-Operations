@@ -45,16 +45,20 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 │       ├── Delete and validate via ReplicaSet
 │       └── Scale up/down via ReplicaSet
 └── Deployments
-    ├── Manifests
-    │   └── Create deployment manifests and pods
-    └── Testing, scale up, scale down, rollouts and rollbacks
-        ├── Validate deployments
-        ├── Create deployment manifests and pods
-        ├── Validate replica scaling
-        ├── Validate all deployment components
-        ├── Deployment testing, rollouts, and rollbacks
-        ├── Deployment version updates
-        └── Further deployment scale up/down, testing, and version updates
+│   ├── Manifests
+│   │   └── Create deployment manifests and pods
+│   └── Testing, scale up, scale down, rollouts and rollbacks
+│       ├── Validate deployments
+│       ├── Create deployment manifests and pods
+│       ├── Validate replica scaling
+│       ├── Validate all deployment components
+│       ├── Deployment testing, rollouts, and rollbacks
+│       ├── Deployment version updates
+│       └── Further deployment scale up/down, testing, and version updates
+└── Namespaces & Taints
+│   ├── Manifests
+│   │   └── Create namespace manifests
+│   └── Create namespace
 ```
 ## Minikube
 - 08122025 Install Minikube.
@@ -114,7 +118,7 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 - 08172025 Scale down the number of replicas to 2, without editing the manifest (using CLI syntax), then validate that only two pods are running.  
   ![RS1-8](Replicasets/RS1-8.jpg)
   
-  ## Deployments
+## Deployments
 - 08172025 Create new deployment manifest, create the deployment, validate the pod status.
   ![Dep1-1](Deployments/Dep1-1.jpg)
 - 08172025 Validate the details of the newly created deployment.
@@ -145,3 +149,7 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![Dep1-14](Deployments/Dep1-14.jpg)
 - 08192025 Validate the replica count is correct by describing the deployment.
   ![Dep1-15](Deployments/Dep1-15.jpg)
+
+## Namespaces & Taints
+- 08192025 Create namespace manifest then create first namespace.
+  ![Nst1-1](Namespaces/Nst1-1.jpg)
