@@ -1,0 +1,12 @@
+apiVersion: v1
+clusters:
+-  clusters:
+     certificate-authority: ca.crt
+     server: https://kube-apiserver:6443
+   name: kubernetes
+kind: Config
+users:
+- name: kubeadmin
+  users:
+    client-certificate: admin.crt
+    client-key: admin.key

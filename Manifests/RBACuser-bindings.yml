@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata: 
+  name: user-binding
+subjects:
+- kind: User
+  name: power-user
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: poweruser 
+  apiGroup: rbac.authorization.k8s.io  
