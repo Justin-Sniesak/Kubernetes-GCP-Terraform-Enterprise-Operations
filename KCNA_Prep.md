@@ -10,6 +10,13 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 
 ```
 ├── README.md
+└── Screenshots
+|       ├── Minikube/
+|       ├── Docker/
+|       ├── Pods/
+|       ├── ReplicaSets/
+|       ├── Deployments/
+|       └── Namespaces/
 ├── Manifests (All manifests are stored here)
 ├── Minikube
 │   ├── Installation
