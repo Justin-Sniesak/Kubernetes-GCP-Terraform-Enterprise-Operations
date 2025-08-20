@@ -153,3 +153,5 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 ## Namespaces & Taints
 - 08192025 Create namespace manifest then create first namespace.
   ![Nst1-1](Namespaces/Nst1-1.jpg)
+- 08192025 Check if any taints are currently set on the node.
+  ![Nst1-2](Namespaces/Nst1-2.jpg)
