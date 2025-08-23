@@ -41,7 +41,8 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 │   ├── Manifests
 │   │   └── Create manifests and check YAML syntax
 │   ├── Troubleshooting
-│   │   └── Fix restart loops, incorrect images, or version issues
+│   │   └── Fix restart loops, incorrect images, version or version naming convention related issues
+│   │   └── Fix pod not creating from image
 │   └── Manifest pod creation
 │       ├── Create manifest and start pods
 │       ├── Review pod details after confirming running
@@ -106,11 +107,11 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![PM1-2](Pods_Manifests/PM1-2.jpg)
 - 08162025 Create the manifest then validate both spacing and contents are correct.
   ![PM1-3](Pods_Manifests/PM1-3.jpg)
-- 08162025 Troubleshooting of pods not starting due to crash loop.
+- 08162025 TROUBLESHOOTING: Pod not starting due to acrash loop.
   ![PM1-4](Pods_Manifests/PM1-4.jpg)
-- 08162025 Troubleshooting of the wrong image being defined in the manifest.
+- 08162025 TROUBLESHOOTING: tHE wrong image is defined in the pod manifest.
   ![PM1-5](Pods_Manifests/PM1-5.jpg)
-- 08162025 Troubleshooting of the incorrect image version being defined in the manifest.
+- 08162025 TROUBLESHOOTING: The incorrect image version is defined in the pod manifest.
   ![PM1-6](Pods_Manifests/PM1-6.jpg)
 - 08162025 Describe running pods and review applicable details, speficially start process for all three.
   ![PM1-7](Pods_Manifests/PM1-7.jpg)
@@ -118,6 +119,8 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![PM1-8](Pods_Manifests/PM1-8.jpg)
 - 08162025 Delete all three pods then validate they are gone on the node.
   ![PM1-9](Pods_Manifests/PM1-9.jpg)
+- 08232025 TROUBLESHOOTING: Pod won't create due to the image name not matching the correct vernacular that is on DockerHub.
+  ![PM1-10](Pods_Manifests/PM1-10.jpg)
 
 ## Replicasets
 - 08172025 ReplicaSet manifest created in Visual Studio Code, validate accesible through bash shell locally.
