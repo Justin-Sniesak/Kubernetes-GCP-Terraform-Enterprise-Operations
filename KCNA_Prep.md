@@ -67,6 +67,9 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 │   │   └── Create namespace manifests
 │   └── Create namespace
 │   └── Validate taints
+└── Security
+│   ├── Certificates
+│   │   └── Create root certificate, create and sign admin certificate, create and sign system: masters cert
 ```
 ## Minikube
 - 08122025 Install Minikube.
@@ -165,3 +168,12 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![Nst1-2](Namespaces/Nst1-2.jpg)
 - 08192025 Check if any taints are currently set on the node.
   ![Nst1-3](Namespaces/Nst1-3.jpg)
+
+## Security
+- 08212025 Create the root certificate.
+  ![Sec1-1](Security/Sec1-1.jpg)
+- 08212025 Create and sign an administrator certificate.
+  ![Sec1-2](Security/Sec1-2.jpg)
+- 08212025 Create and sign the system masters certificate.
+  ![Sec1-3](Security/Sec1-3.jpg)
+  ![Nst1-1](Namespaces/Nst1-1.jpg)
