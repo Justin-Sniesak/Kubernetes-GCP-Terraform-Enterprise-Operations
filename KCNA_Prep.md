@@ -16,7 +16,9 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 |       ├── Pods/
 |       ├── ReplicaSets/
 |       ├── Deployments/
-|       └── Namespaces/
+|       └── Namespaces & Taints/
+|       └── Security/
+|       └── ServiceAccounts/
 ├── Manifests (All manifests are stored here)
 ├── Minikube
 │   ├── Installation
@@ -70,6 +72,9 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 └── Security
 │   ├── Certificates
 │   │   └── Create root certificate, create and sign admin certificate, create and sign system: masters cert
+└── Service Accounts
+│   ├── Manifest creation
+│   └── Attach to pods
 ```
 ## Minikube
 - 08122025 Install Minikube.
@@ -176,4 +181,11 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![Sec1-2](Security/Sec1-2.jpg)
 - 08212025 Create and sign the system masters certificate.
   ![Sec1-3](Security/Sec1-3.jpg)
-  ![Nst1-1](Namespaces/Nst1-1.jpg)
+- 08212025 Create and sign certificates for the kube-scheduler, kube-controller-manager and kube-proxy services.
+  ![Sec1-4](Security/Sec1-4.jpg)
+
+## Service Accounts
+- 08212025 Create a service account, validate on the node, describe the service account.
+  ![SA1-1](ServiceAccounts/SA1-1.jpg)
+- 08212025 Describe a pod with an attached service account.
+  ![SA1-2](ServiceAccounts/SA1-2.jpg)
