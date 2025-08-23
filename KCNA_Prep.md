@@ -76,6 +76,8 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 │   ├── Manifest creation
 │   └── Attach to pods
 │   └── Token obtain and review - token attribute review
+│   ├── Troubleshooting
+│   │   └── Manifest not being applied to pod and service account
 ```
 ## Minikube
 - 08122025 Install Minikube.
@@ -194,3 +196,5 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![SA1-3](ServiceAccounts/SA1-3.jpg)
 - 08232025 Install jq so am able to view the decoded token JSON, view both the exp and iat values in the token, calculate to confirm the token expiration is set for one year. Both are set in seconds and the formula for determining the token TTL is exp - iat = token expiration date.
   ![SA1-4](ServiceAccounts/SA1-4.jpg)
+- 08232025 TROUBLESHOOTING: The manifest is not creating either the serviceaccount or the pod, Visual Studio Code (VSC) is not updating the manifest on the node. Updated the manifest on the node then deleted the pod, re-applied the manifest, validated each have now been created.
+  ![SA1-5](ServiceAccounts/SA1-5.jpg)
