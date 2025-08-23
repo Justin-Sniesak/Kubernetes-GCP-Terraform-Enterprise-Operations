@@ -75,6 +75,7 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 └── Service Accounts
 │   ├── Manifest creation
 │   └── Attach to pods
+│   └── Token obtain and review - token attribute review
 ```
 ## Minikube
 - 08122025 Install Minikube.
@@ -189,3 +190,7 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![SA1-1](ServiceAccounts/SA1-1.jpg)
 - 08212025 Describe a pod with an attached service account.
   ![SA1-2](ServiceAccounts/SA1-2.jpg)
+- 08232025 Grab Java Web Token (JWT) for the Prometheus pod.
+  ![SA1-3](ServiceAccounts/SA1-3.jpg)
+- 08232025 Install jq so am able to view the decoded token JSON, view both the exp and iat values in the token, calculate to confirm the token expiration is set for one year. Both are set in seconds and the formula for determining the token TTL is exp - iat = token expiration date.
+  ![SA1-4](ServiceAccounts/SA1-4.jpg)
