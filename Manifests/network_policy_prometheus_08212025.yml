@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: prometheus-policy
+spec:
+  podSelector:
+    matchLabels:
+      role: prometheus
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+    - ports: 
+      - protocol: TCP
+        port: 1596
+  egress:
+    - ports:
+      - protocol: TCP
+        port: 5196
