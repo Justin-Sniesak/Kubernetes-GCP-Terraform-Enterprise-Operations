@@ -2,10 +2,9 @@ This file details the subfolders where the various manifests I have created are 
 ```
 Manifests/
 ├── Deployments
-├── Docker
-├── Minikube
+├── LimitRanges
 ├── Namespaces
-├── PodsManifests
+├── Network
+├── Pods
 ├── Replicasets
 ├── Security
-├── ServiceAccounts
