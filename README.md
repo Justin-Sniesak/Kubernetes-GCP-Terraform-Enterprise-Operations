@@ -114,7 +114,7 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
   ![Nst1-3](Namespaces/Nst1-3.jpg)
 
 ## Networking
-- 2025-08-24 TROUBLESHOOTING: Create network policy manifest, apply to node, identify and correct JSON error in manifest, apply and validate applied to pod
+- 2025-08-24 TROUBLESHOOTING: Create network policy manifest, apply to node, identify and correct JSON error in manifest, apply and validate applied to pod.
   ![Net1-1](Networking/Net1-1.jpg)  
 
 ## Pods
