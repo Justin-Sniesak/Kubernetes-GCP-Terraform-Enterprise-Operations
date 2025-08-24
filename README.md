@@ -41,7 +41,7 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 │   ├── Manifests
 │   │   └── Create manifests and check YAML syntax
 │   ├── Troubleshooting
-│   │   └── Fix restart loops, incorrect images, version or version naming convention related issues
+│   │   └── Fix restart loops, erroneous images, version or version naming convention related issues
 │   │   └── Fix pod not creating from image
 │   └── Manifest pod creation
 │       ├── Create manifest and start pods
@@ -121,6 +121,8 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![PM1-9](Pods_Manifests/PM1-9.jpg)
 - 08232025 TROUBLESHOOTING: Pod won't create due to the image name not matching the correct vernacular that is on DockerHub.
   ![PM1-10](Pods_Manifests/PM1-10.jpg)
+- 08232025 TROUBLESHOOTING: The Prometheus pod will not start, found that the image in the manifest was incorrect. Deleted the pod.
+  ![PM1-11](Pods_Manifests/PM1-11.jpg)
 
 ## Replicasets
 - 08172025 ReplicaSet manifest created in Visual Studio Code, validate accesible through bash shell locally.
