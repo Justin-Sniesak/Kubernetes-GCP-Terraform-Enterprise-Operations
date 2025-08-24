@@ -1,5 +1,5 @@
 ## Scope
-This repo covers all projects, tasks, and troubleshooting in preperation for obtaining the KCNA. 
+This repo covers all projects, tasks, and troubleshooting completed in preparation for obtaining the KCNA, demonstrating both hands-on Kubernetes skills and practical knowledge.
 
 ## Environment
 - Minikube: v1.33.1
@@ -10,79 +10,48 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 
 ```
 ├── README.md
-└── Screenshots
-|       ├── Deployments/
-|       ├── Docker/
-|       ├── Minikube/
-|       ├── Namespaces/
-|       ├── Networking/
-|       ├── Pods/
-|       ├── Replicasets/
-|       ├── Security/
-|       ├── Serviceaccounts/
-├── Manifests (All manifests are stored here)
+├── Screenshots
+│   ├── Deployments/
+│   ├── Docker/
+│   ├── Minikube/
+│   ├── Namespaces/
+│   ├── Networking/
+│   ├── Pods/
+│   ├── ReplicaSets/
+│   ├── Security/
+│   └── ServiceAccounts/
+├── Manifests 
 ├── Deployments
 │   ├── Manifests
-│   │   └── Create deployment manifests and pods
 │   └── Testing, scale up, scale down, rollouts and rollbacks
-│       ├── Validate deployments
-│       ├── Create deployment manifests and pods
-│       ├── Validate replica scaling
-│       ├── Validate all deployment components
-│       ├── Deployment testing, rollouts, and rollbacks
-│       ├── Deployment version updates
-│       └── Further deployment scale up/down, testing, and version updates
 ├── Docker
 │   ├── Installation
-│   │   └── Install Docker locally, confirm Hello World container launches and SSH access
 │   └── Version
-│       └── Validate installed Docker version
 ├── Minikube
 │   ├── Installation
-│   │   └── Install Minikube locally
 │   ├── Create, validate, destroy
-│   │   ├── Start cluster and check Minikube version
-│   │   └── Stop the cluster
 │   ├── Install, test and validate kubectl
-│   │   └── Install kubectl, validate cluster info, check version
 │   └── Troubleshooting
-│       └── Fix startup issues and adjust memory allocation
 ├── Namespaces
 │   ├── Manifests
-│   │   └── Create namespace manifests
-│   └── Create namespace
+│   ├── Create namespace
 │   └── Validate taints
 ├── Networking
 │   ├── Troubleshooting
-│   │   └── Network policy not being applied due to JSON error
 ├── Pods 
 │   ├── Pods
-│   │   └── Manual creation, deletion, and validation 
 │   ├── Manifests
-│   │   └── Create manifests and check YAML syntax
 │   ├── Troubleshooting
-│   │   └── Fix restart loops, erroneous images, version or version naming convention related issues
-│   │   └── Fix pod not creating from image
 │   └── Manifest pod creation
-│       ├── Create manifest and start pods
-│       ├── Review pod details after confirming running
-│       └── Delete pods and confirm removal
 ├── ReplicaSets
 │   ├── Manifests
-│   │   └── Create and modify ReplicaSets and Pods
 │   └── Pods 
-│       ├── Create and validate via ReplicaSet
-│       ├── Delete and validate via ReplicaSet
-│       └── Scale up/down via ReplicaSet
 ├── Security
 │   ├── Certificates
-│   │   └── Create root certificate, create and sign admin certificate, create and sign system: masters cert
-└── Serviceaccounts
+└── ServiceAccounts
 │   ├── Manifest creation
-│   └── Attach to pods
-│   └── Token obtain and review - token attribute review
+│   ├── Attach to pods
 │   ├── Troubleshooting
-│   │   └── Manifest not being applied to pod and service account
 ```
 ## Deployments
 - 2025-08-17 Create new deployment manifest, create the deployment, validate the pod status.
@@ -114,7 +83,7 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 - 2025-08-19 Validate the image version has been rolled back to the desired version.
   ![Dep1-14](Deployments/Dep1-14.jpg)
 - 2025-08-19 Validate the replica count is correct by describing the deployment.
-  ![Dep1-15](Deployments/Dep1-15.jpg)```
+  ![Dep1-15](Deployments/Dep1-15.jpg)
 
 ## Docker
 - 2025-08-13 Install Docker and Launch Hello World container.
@@ -155,13 +124,13 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
   ![Pod1-2](Pods/Pod1-2.jpg)
 - 2025-08-16 Create the manifest then validate both spacing and contents are correct.
   ![Pod1-3](Pods/Pod1-3.jpg)
-- 2025-08-16 TROUBLESHOOTING: Pod not starting due to acrash loop.
+- 2025-08-16 TROUBLESHOOTING: Pod not starting due to a crash loop.
   ![Pod1-4](Pods/Pod1-4.jpg)
-- 2025-08-16 TROUBLESHOOTING: tHE wrong image is defined in the pod manifest.
+- 2025-08-16 TROUBLESHOOTING: The wrong image is defined in the pod manifest.
   ![Pod1-5](Pods/Pod1-5.jpg)
 - 2025-08-16 TROUBLESHOOTING: The incorrect image version is defined in the pod manifest.
   ![Pod1-6](Pods/Pod1-6.jpg)
-- 2025-08-16 Describe running pods and review applicable details, speficially start process for all three.
+- 2025-08-16 Describe running pods and review applicable details, specifically start process for all three.
   ![Pod1-7](Pods/Pod1-7.jpg)
 - 2025-08-16 Create a manifest for all three pods, start them, validate 3/3 are now running on the node.
   ![Pod1-8](Pods/Pod1-8.jpg)
@@ -172,23 +141,23 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 - 2025-08-23 TROUBLESHOOTING: The Prometheus pod will not start, found that the image in the manifest was incorrect. Deleted the pod.
   ![Pod1-11](Pods/Pod1-11.jpg)
 
-## Replicasets
-- 2025-08-17 ReplicaSet manifest created in Visual Studio Code, validate accesible through bash shell locally.
-  ![RS1-1](Replicasets/RS1-1.jpg)
+## ReplicaSets
+- 2025-08-17 ReplicaSet manifest created in Visual Studio Code, validate accessible through bash shell locally.
+  ![RS1-1](ReplicaSets/RS1-1.jpg)
 - 2025-08-17 Create ReplicaSet manifest in bash, then validate the correct number of pods are started running in a healthy state.
-  ![RS1-2](Replicasets/RS1-2.jpg)
+  ![RS1-2](ReplicaSets/RS1-2.jpg)
 - 2025-08-17 Create new pod manifest in Visual Studio Code, validate available in bash, to be used with Replicaset testing.
-  ![RS1-3](Replicasets/RS1-3.jpg)
+  ![RS1-3](ReplicaSets/RS1-3.jpg)
 - 2025-08-17 Confirm correct number of pods defined in the Replicaset are running.
-  ![RS1-4](Replicasets/RS1-4.jpg)
+  ![RS1-4](ReplicaSets/RS1-4.jpg)
 - 2025-08-17 Delete a pod, then validate the Replicaset created and started new pod, validate 3/3 are running, so HA is functioning as intended.
-  ![RS1-5](Replicasets/RS1-5.jpg)
+  ![RS1-5](ReplicaSets/RS1-5.jpg)
 - 2025-08-17 Check the details of the Replicaset, specifically checking for both replica and pod counts.  
-  ![RS1-6](Replicasets/RS1-6.jpg)
+  ![RS1-6](ReplicaSets/RS1-6.jpg)
 - 2025-08-17 Edit the Replicaset manifest, scale the number of replicas to 4, confirm the fourth pod has been started, and is now running.  
-  ![RS1-7](Replicasets/RS1-7.jpg)
+  ![RS1-7](ReplicaSets/RS1-7.jpg)
 - 2025-08-17 Scale down the number of replicas to 2, without editing the manifest (using CLI syntax), then validate that only two pods are running.  
-  ![RS1-8](Replicasets/RS1-8.jpg)
+  ![RS1-8](ReplicaSets/RS1-8.jpg)
   
 ## Security
 - 2025-08-21 Create the root certificate.
@@ -200,14 +169,14 @@ This repo covers all projects, tasks, and troubleshooting in preperation for obt
 - 2025-08-21 Create and sign certificates for the kube-scheduler, kube-controller-manager and kube-proxy services.
   ![Sec1-4](Security/Sec1-4.jpg)
 
-## Service Accounts
+## ServiceAccounts
 - 2025-08-21 Create a service account, validate on the node, describe the service account.
   ![SA1-1](ServiceAccounts/SA1-1.jpg)
 - 2025-08-21 Describe a pod with an attached service account.
   ![SA1-2](ServiceAccounts/SA1-2.jpg)
 - 2025-08-23 Grab Java Web Token (JWT) for the Prometheus pod.
   ![SA1-3](ServiceAccounts/SA1-3.jpg)
-- 2025-08-23 Install jq so am able to view the decoded token JSON, view both the exp and iat values in the token, calculate to confirm the token expiration is set for one year. Both are set in seconds and the formula for determining the token TTL is exp - iat = token expiration date.
+- 2025-08-23 Install jq locally to view the decoded token JSON, view both the exp and iat values in the token, calculate to confirm the token expiration is set for one year. Both are set in seconds and the formula for determining the token TTL is exp - iat = token expiration date.
   ![SA1-4](ServiceAccounts/SA1-4.jpg)
 - 2025-08-23 TROUBLESHOOTING: The manifest is not creating either the serviceaccount or the pod, Visual Studio Code (VSC) is not updating the manifest on the node. Updated the manifest on the node then deleted the pod, re-applied the manifest, validated each have now been created.
   ![SA1-5](ServiceAccounts/SA1-5.jpg)
