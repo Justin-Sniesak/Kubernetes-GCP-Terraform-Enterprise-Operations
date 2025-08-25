@@ -7,12 +7,15 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 - Operating System: Ubuntu 24.0.3 LTS
 - YAML for manifests
 - Visual Studio Code: v1.103.1
+- Istio Demo Profile: 1.27.0
+- Docker: 28.3.3
 
 ```
 ├── README.md
 ├── Screenshots
 │   ├── Deployments/
 │   ├── Docker/
+│   ├── Istio/
 │   ├── Minikube/
 │   ├── Namespaces/
 │   ├── Networking/
@@ -25,6 +28,9 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 │   ├── Manifests
 │   └── Testing, scale up, scale down, rollouts and rollbacks
 ├── Docker
+│   ├── Installation
+│   └── Version
+├── Istio
 │   ├── Installation
 │   └── Version
 ├── Minikube
@@ -88,8 +94,15 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 ## Docker
 - 2025-08-13 Install Docker and Launch Hello World container.
   ![Doc1-1](Docker/Doc1-1.jpg)
-- 2025-08-13 Validate locally installed Docker version.
+- 2025-08-13 Validate locally installed version.
   ![Doc1-2](Docker/Doc1-2.jpg)
+
+## Istio
+- 2025-08-24 Install Istio with demo profile, then validate the installation stability.
+  ![IS1-1](Istio/IS1-1.jpg)
+- 2025-08-13 Validate locally installed version.
+  ![IS1-2](Istio/IS1-2.jpg)
+
 
 ## Minikube
 - 2025-08-12 Install Minikube.
