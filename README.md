@@ -2,13 +2,15 @@
 This repo covers all projects, tasks, and troubleshooting completed in preparation for obtaining the KCNA, demonstrating both hands-on Kubernetes skills and practical knowledge.
 
 ## Environment
-- Minikube: v1.33.1
-- kubectl: 1.33.4
-- Operating System: Ubuntu 24.0.3 LTS
-- YAML for manifests
-- Visual Studio Code: v1.103.1
-- Istio Demo Profile: 1.27.0
 - Docker: 28.3.3
+- GCP Compute Engine, Cloud Storage
+- Istio Demo Profile: 1.27.0
+- kubectl: 1.33.4
+- Minikube: v1.33.1
+- Minikube: v1.33.1
+- Ubuntu 24.0.3 LTS
+- Visual Studio Code: v1.103.1
+- YAML 
 
 ```
 ├── README.md
@@ -106,21 +108,21 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 
 ## GCP
 - 2025-08-29 Create storage buckets in GCP project for compute VMs, prometheus monitoring/observability and kubernetes.
-  ![GCP1-1](GCP/GCP1-1.jpg)
+  ![gcp1-1](GCP/gcp1-1.jpg)
 - 2025-08-29 Create primary VM in GCP project to provision worker VMs with terraform.
-  ![GCP1-2](GCP/GCP1-2.jpg)
+  ![gcp1-2](GCP/gcp1-2.jpg)
 - 2025-08-29 Create RSA keypair on main workstation to vacilitate SSH RSA authentication to primary GCP VM.
-  ![GCP1-3](GCP/GCP1-3.jpg)
+  ![gcp1-3](GCP/gcp1-3.jpg)
 - 2025-08-29 Add public key to primary GCP VM then validate SSH authentication from main workstation.
-  ![GCP1-4](GCP/GCP1-4.jpg)
+  ![gcp1-4](GCP/gcp1-4.jpg)
 - 2025-08-29 Install terraform and validate on primary GCP VM.
-  ![GCP1-5](GCP/GCP1-5.jpg)
+  ![gcp1-5](GCP/gcp1-5.jpg)
 - 2025-08-29 Create bash script on primary workstation to facilitate faster SSH authentication to primary GCP VM.
-  ![GCP1-6](GCP/GCP1-6.jpg)
+  ![gcp1-6](GCP/gcp1-6.jpg)
 - 2025-08-29 Change primary terraform GCP VM IP address type to standard ephemeral as well as network type to standard in GCP compute.
-  ![GCP1-7](GCP/GCP1-7.jpg)
+  ![gcp1-7](GCP/gcp1-7.jpg)
 - 2025-08-29 Install and validate the gcloud shell on main workspace.
-  ![GCP1-8](GCP/GCP1-8.jpg)
+  ![gcp1-8](GCP/gcp1-8.jpg)
 
 ## Istio
 - 2025-08-24 Install Istio with demo profile, then validate the installation stability.
