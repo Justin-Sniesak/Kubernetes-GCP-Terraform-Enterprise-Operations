@@ -31,24 +31,30 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 ├── Docker
 │   ├── Installation
 │   └── Version
+├── GCP
+│   ├── Bucket and VM provisioning; VM network settings tuning
+│   └── Install and validate Terraform
 ├── Istio
 │   ├── Installation
-│   └── Version
+│   ├── Version
+│   └── Install, test, validate and cleanup Bookclub application
 ├── Minikube
 │   ├── Installation
 │   ├── Create, validate, destroy
 │   ├── Install, test and validate kubectl
+│   ├── Provision external load balancer to externally expose Istio Bookclub application traffic
 │   └── Troubleshooting
 ├── Namespaces
 │   ├── Manifests
 │   ├── Create namespace
 │   └── Validate taints
 ├── Networking
-│   ├── Troubleshooting
+│   └── Troubleshooting
 ├── Pods 
 │   ├── Pods
 │   ├── Manifests
 │   ├── Troubleshooting
+│   ├── Additional pod creation and api-resources validation
 │   └── Manifest pod creation
 ├── ReplicaSets
 │   ├── Manifests
