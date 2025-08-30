@@ -8,6 +8,7 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 - kubectl: 1.33.4
 - Minikube: v1.33.1
 - Minikube: v1.33.1
+- Terraform: v1.13.1
 - Ubuntu 24.0.3 LTS
 - Visual Studio Code: v1.103.1
 - YAML 
