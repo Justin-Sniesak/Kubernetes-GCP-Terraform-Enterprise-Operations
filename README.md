@@ -63,11 +63,11 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 │   ├── Manifests
 │   └── Pods 
 ├── Security
-│   ├── Certificates
+│   └── Certificates
 └── ServiceAccounts
 │   ├── Manifest creation
 │   ├── Attach to pods
-│   ├── Troubleshooting
+│   └── Troubleshooting
 ```
 ## Deployments
 - 2025-08-17 Create new deployment manifest, create the deployment, validate the pod status.
