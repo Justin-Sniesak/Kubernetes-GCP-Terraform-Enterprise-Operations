@@ -15,6 +15,7 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 ├── Screenshots
 │   ├── Deployments/
 │   ├── Docker/
+│   ├── GCP/
 │   ├── Istio/
 │   ├── Minikube/
 │   ├── Namespaces/
@@ -97,12 +98,45 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 - 2025-08-13 Validate locally installed version.
   ![Doc1-2](Docker/Doc1-2.jpg)
 
+## GCP
+- 2025-08-29 Create storage buckets in GCP project for compute VMs, prometheus monitoring/observability and kubernetes.
+  ![GCP1-1](GCP/GCP1-1.jpg)
+- 2025-08-29 Create primary VM in GCP project to provision worker VMs with terraform.
+  ![GCP1-2](GCP/GCP1-2.jpg)
+- 2025-08-29 Create RSA keypair on main workstation to vacilitate SSH RSA authentication to primary GCP VM.
+  ![GCP1-3](GCP/GCP1-3.jpg)
+- 2025-08-29 Add public key to primary GCP VM then validate SSH authentication from main workstation.
+  ![GCP1-4](GCP/GCP1-4.jpg)
+- 2025-08-29 Install terraform and validate on primary GCP VM.
+  ![GCP1-5](GCP/GCP1-5.jpg)
+- 2025-08-29 Create bash script on primary workstation to facilitate faster SSH authentication to primary GCP VM.
+  ![GCP1-6](GCP/GCP1-6.jpg)
+- 2025-08-29 Change primary terraform GCP VM IP address type to standard ephemeral as well as network type to standard in GCP compute.
+  ![GCP1-7](GCP/GCP1-7.jpg)
+- 2025-08-29 Install and validate the gcloud shell on main workspace.
+  ![GCP1-8](GCP/GCP1-8.jpg)
+
 ## Istio
 - 2025-08-24 Install Istio with demo profile, then validate the installation stability.
   ![IS1-1](Istio/IS1-1.jpg)
-- 2025-08-13 Validate locally installed version.
+- 2025-08-13 Validate locally installed Istio version.
   ![IS1-2](Istio/IS1-2.jpg)
-
+- 2025-08-29 Install Bookclub app in Istio default namespace with demo profile, validate services and pods are running.
+  ![IS1-3](Istio/IS1-3.jpg)
+- 2025-08-29 Validate Bookclub app in Istion default namepace is accepting HHTP requests served up by praqma pod utilizing curl. 
+  ![IS1-4](Istio/IS1-4.jpg)
+- 2025-08-29 Create gateway and virtual networking services in Istio default namespace, confirm the gateway is up, export the INGRESS_NAME var, validate the gateway external IP has been created and is available, export the INGRESS_PORT, SECURE_INGRESS_PORT and TCP_INGRESS_PORT variables.
+  ![IS1-5](Istio/IS1-5.jpg)
+- 2025-08-29 Validate the Bookclub app is accesible via CURL in the default Istio namespace.
+  ![IS1-6](Istio/IS1-6.jpg)
+- 2025-08-29 Validate both the load balancer external IP & internal cluster IPs have been provisioned and are available, confirm the $GATEWAY_URL variable IP via echo matches the external IP of the load balancer.
+  ![IS1-7](Istio/IS1-7.jpg)
+- 2025-08-29 Validate the Bookclub app IP has been exposed externally and is reachable via a browser.
+  ![IS1-8](Istio/IS1-8.jpg)
+- 2025-08-29 Validate the Bookclub app is externally exposed and is serving up round robin reviews as expected from the application running in the default Istio namespace.
+  ![IS1-9](Istio/IS1-9.jpg)
+- 2025-08-29 Cleanup and shutdown the Bookclub application running in the default Istio namespace.
+  ![IS1-10](Istio/IS1-10.jpg)
 
 ## Minikube
 - 2025-08-12 Install Minikube.
@@ -117,6 +151,8 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
   ![MK1-5](Minikube/MK1-5.jpg)
 - 2025-08-16 Fix Minikube not starting, reduce memory allocation create pod, create nginx pod.
   ![MK1-6](Minikube/MK1-6.jpg)
+- 2025-08-29 Start and validate external load balancer in minikube and validate running.
+  ![MK1-7](Minikube/MK1-7.jpg)
 
 ## Namespaces 
 - 2025-08-19 Create namespace manifest then create first namespace.
@@ -153,6 +189,10 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
   ![Pod1-10](Pods/Pod1-10.jpg)
 - 2025-08-23 TROUBLESHOOTING: The Prometheus pod will not start, found that the image in the manifest was incorrect. Deleted the pod.
   ![Pod1-11](Pods/Pod1-11.jpg)
+- 2025-08-23 Validating all available api-resources on the node.
+  ![Pod1-12](Pods/Pod1-12.jpg)
+- 2025-08-29 Write manifest for praqma pod, start pod, validate running.
+  ![Pod1-13](Pods/Pod1-13.jpg)
 
 ## ReplicaSets
 - 2025-08-17 ReplicaSet manifest created in Visual Studio Code, validate accessible through bash shell locally.
