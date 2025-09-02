@@ -257,10 +257,10 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 
 ## Storage
 - 2025-09-01 Write Persistent Volume manifest for both the reddis and nginx pods, validate each has been created and review details for each via kubectl describe.
-  ![Stor1-1](Storage/Stor1-1.jpg)
+  ![stor1-1](Storage/stor1-1.jpg)
 - 2025-09-01 Write manifest for both nginx and redis pods, start and validate running 2/2; facilitate understanding of the diferential between persistent volume and ephimeral storage.
-  ![Stor1-2](Storage/Stor1-2.jpg)
+  ![stor1-2](Storage/stor1-2.jpg)
 - 2025-09-01 Describe the reddis pod and validate the automatically created ephimeral volume is present and mapped to the pod; further validation of the mountpoint attached to the pod.
-  ![Stor1-3](Storage/Stor1-3.jpg)
+  ![stor1-3](Storage/stor1-3.jpg)
 - 2025-09-01 Describe the nginx pod and validate the automatically created ephimeral volume is present and mapped to the pod; further validation of the mountpoint attached to the pod.
-  ![Stor1-4](Storage/Stor1-4.jpg)
+  ![stor1-4](Storage/stor1-4.jpg)
