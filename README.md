@@ -38,6 +38,7 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 │   └── Version
 ├── GCP
 │   ├── Bucket and VM provisioning; VM network settings tuning
+│   ├── VM primary disk adhoc snapshots and scheduled snapshots
 │   └── Install and validate Terraform
 ├── Istio
 │   ├── Installation
@@ -130,12 +131,12 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
   ![gcp1-7](GCP/gcp1-7.jpg)
 - 2025-08-29 Install and validate the gcloud shell on main workspace.
   ![gcp1-8](GCP/gcp1-8.jpg)
-- 2025-08-29 Install and validate the gcloud shell on main workspace.
-  ![gcp1-8](GCP/gcp1-8.jpg)
 - 2025-08-29 Assign primary VM persistent disk to snapshot schedule.
   ![gcp1-9](GCP/gcp1-9.jpg)
 - 2025-09-01 Validate primary disk for terraform bastion host has been assigned to VM snapshot schedule, validate run times.
-  ![gcp1-9](GCP/gcp1-10.jpg)
+  ![gcp1-10](GCP/gcp1-10.jpg)
+- 2025-09-01 Create one off snapshot for primary disk or bastion host/terraform VM and validate it succesfully completed.
+  ![gcp1-11](GCP/gcp1-11.jpg)
 
 ## Istio
 - 2025-08-24 Install Istio with demo profile, then validate the installation stability.
@@ -189,31 +190,35 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 
 ## Pods
 - 2025-08-16 Validate running pods on the node and then review pod details.
-  ![Pod1-1](Pods/Pod1-1.jpg)
+  ![pod1-1](Pods/pod1-1.jpg)
 - 2025-08-16 Delete the pod and validate no longer running on the node.
-  ![Pod1-2](Pods/Pod1-2.jpg)
+  ![pod1-2](Pods/pod1-2.jpg)
 - 2025-08-16 Create the manifest then validate both spacing and contents are correct.
-  ![Pod1-3](Pods/Pod1-3.jpg)
+  ![pod1-3](Pods/pod1-3.jpg)
 - 2025-08-16 TROUBLESHOOTING: Pod not starting due to a crash loop.
-  ![Pod1-4](Pods/Pod1-4.jpg)
+  ![pod1-4](Pods/pod1-4.jpg)
 - 2025-08-16 TROUBLESHOOTING: The wrong image is defined in the pod manifest.
-  ![Pod1-5](Pods/Pod1-5.jpg)
+  ![pod1-5](Pods/pod1-5.jpg)
 - 2025-08-16 TROUBLESHOOTING: The incorrect image version is defined in the pod manifest.
-  ![Pod1-6](Pods/Pod1-6.jpg)
+  ![pod1-6](Pods/pod1-6.jpg)
 - 2025-08-16 Describe running pods and review applicable details, specifically start process for all three.
-  ![Pod1-7](Pods/Pod1-7.jpg)
+  ![pod1-7](Pods/pod1-7.jpg)
 - 2025-08-16 Create a manifest for all three pods, start them, validate 3/3 are now running on the node.
-  ![Pod1-8](Pods/Pod1-8.jpg)
+  ![pod1-8](Pods/pod1-8.jpg)
 - 2025-08-16 Delete all three pods then validate they are gone on the node.
-  ![Pod1-9](Pods/Pod1-9.jpg)
+  ![pod1-9](Pods/pod1-9.jpg)
 - 2025-08-23 TROUBLESHOOTING: Pod won't create due to the image name not matching the correct vernacular that is on DockerHub.
-  ![Pod1-10](Pods/Pod1-10.jpg)
+  ![pod1-10](Pods/pod1-10.jpg)
 - 2025-08-23 TROUBLESHOOTING: The Prometheus pod will not start, found that the image in the manifest was incorrect. Deleted the pod.
-  ![Pod1-11](Pods/Pod1-11.jpg)
+  ![pod1-11](Pods/pod1-11.jpg)
 - 2025-08-23 Validating all available api-resources on the node.
-  ![Pod1-12](Pods/Pod1-12.jpg)
+  ![pod1-12](Pods/pod1-12.jpg)
 - 2025-08-29 Write manifest for praqma pod, start pod, validate running.
-  ![Pod1-13](Pods/Pod1-13.jpg)
+  ![pod1-13](Pods/pod1-13.jpg)
+- 2025-09-01 Write manifest and create golang pod, confirm running, connect to pod (exec -it), validate data is being created in the mounted hostPath volume.
+  ![pod1-14](Pods/pod1-14.jpg)
+- 2025-09-01 Describe golang pod, then confirm the hostPath volume is mounted via describing the pod.
+  ![pod1-15](Pods/pod1-15.jpg)
 
 ## ReplicaSets
 - 2025-08-17 ReplicaSet manifest created in Visual Studio Code, validate accessible through bash shell locally.
