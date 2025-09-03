@@ -3,7 +3,7 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 
 ## Environment
 - Docker: 28.3.3
-- GCP Compute Engine, Cloud Storage
+- GCP Compute Engine, Cloud Storage, Billing, gcloud, IAM
 - Istio Demo Profile: 1.27.0
 - kubectl: 1.33.4
 - Minikube: v1.33.1
@@ -28,6 +28,7 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 │   ├── Security/
 │   ├── ServiceAccounts/
 │   └── Storage/
+│   └── Terraform/
 ├── Manifests 
 ├── Deployments
 │   ├── Manifests
@@ -39,7 +40,11 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 ├── GCP
 │   ├── Bucket and VM provisioning; VM network settings tuning
 │   ├── VM primary disk adhoc snapshots and scheduled snapshots
-│   └── Install and validate Terraform
+│   ├── Review and analyze spend for the month in Billing
+│   ├── Additional review by project and service as well as review of Billing dashboard, including filtering by SKU
+│   ├── Generate billing reports and set alerting thresholds - configure alerting methodology
+│   ├── Configure authentication to GCP project from workstation via gcloud
+│   └── Multiple gserviceaccount IAM binding administration and bucket validation via gcloud
 ├── Istio
 │   ├── Installation
 │   ├── Version
@@ -49,10 +54,11 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 │   ├── Create, validate, destroy
 │   ├── Install, test and validate kubectl
 │   ├── Provision external load balancer to externally expose Istio Bookclub application traffic
+│   ├── Filesystem creation and validation
 │   └── Troubleshooting
 ├── Namespaces
 │   ├── Manifests
-│   ├── Create namespace
+│   ├── Namespace creation and management
 │   └── Validate taints
 ├── Networking
 │   └── Troubleshooting
@@ -67,10 +73,22 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 │   └── Pods 
 ├── Security
 │   └── Certificates
-└── ServiceAccounts
+├── ServiceAccounts
 │   ├── Manifest creation
 │   ├── Attach to pods
 │   └── Troubleshooting
+├── Storage
+│   ├── Ephemeral Volume testing and validation
+│   ├── PersistentVolume (PV) creation and validation
+│   ├── PersistentVolumeClaim (PVC) creation and validation
+│   ├── PersistentVolume (PV) and PersistentVolumeClaim (PVC) creation and validation
+│   ├── Validate PersistentVolume (PV) and PersistentVolumeClaim (PVC) bind status across multiple namespaces
+│   ├── Multi-pod PersistentVolume (PV) and PersistentVolumeClaim (PVC) creation and validation
+│   └── Storageclass creation and validation
+├── Terraform
+│   ├── Install and validate Terraform
+│   ├── Create compute manifest for declarative management of compute resources in GCP project
+│   └── Declarativly provision, validate and destroy additional compute resources in GCP project
 ```
 ## Deployments
 - 2025-08-17 Create new deployment manifest, create the deployment, validate the pod status.
@@ -123,20 +141,38 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
   ![gcp1-3](GCP/gcp1-3.jpg)
 - 2025-08-29 Add public key to primary GCP VM then validate SSH authentication from main workstation.
   ![gcp1-4](GCP/gcp1-4.jpg)
-- 2025-08-29 Install terraform and validate on primary GCP VM.
-  ![gcp1-5](GCP/gcp1-5.jpg)
 - 2025-08-29 Create bash script on primary workstation to facilitate faster SSH authentication to primary GCP VM.
-  ![gcp1-6](GCP/gcp1-6.jpg)
+  ![gcp1-5](GCP/gcp1-5.jpg)
 - 2025-08-29 Change primary terraform GCP VM IP address type to standard ephemeral as well as network type to standard in GCP compute.
-  ![gcp1-7](GCP/gcp1-7.jpg)
+  ![gcp1-6](GCP/gcp1-6.jpg)
 - 2025-08-29 Install and validate the gcloud shell on main workspace.
-  ![gcp1-8](GCP/gcp1-8.jpg)
-- 2025-08-29 Assign primary VM persistent disk to snapshot schedule.
-  ![gcp1-9](GCP/gcp1-9.jpg)
-- 2025-09-01 Validate primary disk for terraform bastion host has been assigned to VM snapshot schedule, validate run times.
-  ![gcp1-10](GCP/gcp1-10.jpg)
-- 2025-09-01 Create one off snapshot for primary disk or bastion host/terraform VM and validate it succesfully completed.
+  ![gcp1-7](GCP/gcp1-7.jpg)
+- 2025-09-02 Review and analyze overall spend for the month in Billing.
   ![gcp1-11](GCP/gcp1-11.jpg)
+- 2025-09-02 Additional review and analysis of overall spend for the month by project and service in GCP.
+  ![gcp1-12](GCP/gcp1-12.jpg)
+- 2025-09-02 Additional review of Billing dashboard.
+  ![gcp1-13](GCP/gcp1-13.jpg)
+- 2025-09-02 Review of Billing dashboard, filtering by SKU.
+  ![gcp1-14](GCP/gcp1-14.jpg)
+- 2025-09-02 Generate billing report.
+  ![gcp1-15](GCP/gcp1-15.jpg)
+- 2025-09-02 Set alerting thresholds for budgeting in Billing.
+  ![gcp1-16](GCP/gcp1-16.jpg) 
+- 2025-08-29 Assign primary VM persistent disk to snapshot schedule.
+  ![gcp1-8](GCP/gcp1-8.jpg)
+- 2025-09-01 Validate primary disk for terraform bastion host has been assigned to VM snapshot schedule, validate run times.
+  ![gcp1-9](GCP/gcp1-9.jpg)
+- 2025-09-01 Create one off snapshot for primary disk or bastion host/terraform VM and validate it succesfully completed.
+  ![gcp1-10](GCP/gcp1-10.jpg)
+- 2025-09-02 Enable authentication to GCP project using gcloud from primary workstation.
+  ![gcp1-17](GCP/gcp1-17.jpg)
+- 2025-09-02 Create gserviceaccount, assign storage admin iam-account-binding via gcloud.
+  ![gcp1-18](GCP/gcp1-18.jpg)
+- 2025-09-02 Validate current buckets in cloud storage are accesible via gcloud from minikube.
+  ![gcp1-19](GCP/gcp1-19.jpg)
+- 2025-09-02 Create multiple gserviceaccounts, assign storage admin iam-account-binding via gcloud.
+  ![gcp1-20](GCP/gcp1-20.jpg)
 
 ## Istio
 - 2025-08-24 Install Istio with demo profile, then validate the installation stability.
@@ -162,27 +198,31 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
 
 ## Minikube
 - 2025-08-12 Install Minikube.
-  ![MK1-1](Minikube/MK1-1.jpg)
+  ![mk1-1](Minikube/mk1-1.jpg)
 - 2025-08-12 Start cluster and Minikube version validation.
-  ![MK1-2](Minikube/MK1-2.jpg)
+  ![mk1-2](Minikube/mk1-2.jpg)
 - 2025-08-12 Validate the cluster is running, stop the cluster, then delete.
-  ![MK1-3](Minikube/MK1-3.jpg)
+  ![mk1-3](Minikube/mk1-3.jpg)
 - 2025-08-14 Install kubectl, start the cluster, validate cluster info, validate kubectl version.
-  ![MK1-4](Minikube/MK1-4.jpg)
+  ![mk1-4](Minikube/mk1-4.jpg)
 - 2025-08-16 Determined Minikube is not launching because it is not started, and when it is starting it is starting with too much memory allocated.
-  ![MK1-5](Minikube/MK1-5.jpg)
+  ![mk1-5](Minikube/mk1-5.jpg)
 - 2025-08-16 Fix Minikube not starting, reduce memory allocation create pod, create nginx pod.
-  ![MK1-6](Minikube/MK1-6.jpg)
+  ![mk1-6](Minikube/mk1-6.jpg)
 - 2025-08-29 Start and validate external load balancer in minikube and validate running.
-  ![MK1-7](Minikube/MK1-7.jpg)
+  ![mk1-7](Minikube/mk1-7.jpg)
+- 2025-09-02 Create and validate filesystem on the Minikube VM.
+  ![mk1-8](Minikube/mk1-8.jpg)
 
 ## Namespaces 
 - 2025-08-19 Create namespace manifest then create first namespace.
-  ![Nst1-1](Namespaces/Nst1-1.jpg)
+  ![ns1-1](Namespaces/ns1-1.jpg)
 - 2025-08-19 Create namespace with kubectl command.
-  ![Nst1-2](Namespaces/Nst1-2.jpg)
+  ![ns1-2](Namespaces/ns1-2.jpg)
 - 2025-08-19 Check if any taints are currently set on the node.
-  ![Nst1-3](Namespaces/Nst1-3.jpg)
+  ![ns1-3](Namespaces/ns1-3.jpg)
+- 2025-09-02 Multiple namespace creation and validation
+  ![ns1-4](Namespaces/ns1-4.jpg)
 
 ## Networking
 - 2025-08-24 TROUBLESHOOTING: Create network policy manifest, apply to node, identify and correct JSON error in manifest, apply and validate applied to pod.
@@ -219,6 +259,8 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
   ![pod1-14](Pods/pod1-14.jpg)
 - 2025-09-01 Describe golang pod, then confirm the hostPath volume is mounted via describing the pod.
   ![pod1-15](Pods/pod1-15.jpg)
+- 2025-09-02 Validate selectors are sorting pods by assigned label.
+  ![pod1-16](Pods/pod1-16.jpg)
 
 ## ReplicaSets
 - 2025-08-17 ReplicaSet manifest created in Visual Studio Code, validate accessible through bash shell locally.
@@ -240,13 +282,17 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
   
 ## Security
 - 2025-08-21 Create the root certificate.
-  ![Sec1-1](Security/Sec1-1.jpg)
+  ![sec1-1](Security/sec1-1.jpg)
 - 2025-08-21 Create and sign an administrator certificate.
-  ![Sec1-2](Security/Sec1-2.jpg)
+  ![sec1-2](Security/sec1-2.jpg)
 - 2025-08-21 Create and sign the system masters certificate.
-  ![Sec1-3](Security/Sec1-3.jpg)
+  ![sec1-3](Security/sec1-3.jpg)
 - 2025-08-21 Create and sign certificates for the kube-scheduler, kube-controller-manager and kube-proxy services.
-  ![Sec1-4](Security/Sec1-4.jpg)
+  ![sec1-4](Security/sec1-4.jpg)
+- 2025-09-02 Create JSON keys and assign to each applicable gservice account
+  ![sec1-5](Security/sec1-5.jpg)
+- 2025-09-02 Create kubernetes secrets from json keys for use all three gservice accounts.
+  ![sec1-6](Security/sec1-6.jpg)
 
 ## ServiceAccounts
 - 2025-08-21 Create a service account, validate on the node, describe the service account.
@@ -269,3 +315,27 @@ This repo covers all projects, tasks, and troubleshooting completed in preparati
   ![stor1-3](Storage/stor1-3.jpg)
 - 2025-09-01 Describe the nginx pod and validate the automatically created ephimeral volume is present and mapped to the pod; further validation of the mountpoint attached to the pod.
   ![stor1-4](Storage/stor1-4.jpg)
+- 2025-09-01 Write PersistentVolumeClaim (PVC) manifest, apply, validate bound to PersistentVolume (PV).
+  ![stor1-5](Storage/stor1-5.jpg)
+- 2025-09-02 Create multiple pods and associated PersistentVolumes in multiple namespaces, validate creation, ready status and namespace.
+  ![stor1-6](Storage/stor1-6.jpg)
+- 2025-09-02 Validate multiple PersistentVolumes (PV) and PersistentVolumeClaims (PVC) bind status across multiple namespaces.
+  ![stor1-7](Storage/stor1-7.jpg)
+- 2025-09-02 Create and validate Storageclass on node.
+  ![stor1-8](Storage/stor1-8.jpg)
+
+## Terraform
+- 2025-08-29 Install terraform and validate on primary GCP VM.
+  ![tf1-1](Terraform/tf1-1.jpg)
+- 2025-09-02 Init TF - validate no issues.
+  ![tf1-2](Terraform/tf1-2.jpg)
+- 2025-09-02 Run TF plan against manifest and validate no issues.
+  ![tf1-3](Terraform/tf1-3.jpg)
+- 2025-09-02 GCP compute validation prior to compute manifest being applied.
+  ![tf1-4](Terraform/tf1-4.jpg)
+- 2025-09-02 Apply compute manifest using terraform, validate additional compute resources have been provisioned declarativly. 
+  ![tf1-5](Terraform/tf1-5.jpg)
+- 2025-09-02 Validate in additional compute resources (VMs) are present in the compute service in GCP project. 
+  ![tf1-6](Terraform/tf1-6.jpg)
+- 2025-09-02 Apply compute manifest using terraform, validate additional compute resources have been destroyed declarativly. 
+  ![tf1-7](Terraform/tf1-7.jpg)
