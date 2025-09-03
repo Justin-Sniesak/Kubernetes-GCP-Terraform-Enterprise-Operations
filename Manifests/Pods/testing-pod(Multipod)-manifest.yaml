@@ -1,0 +1,27 @@
+#Testing resources and objects go here
+--- 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: curl
+  labels:
+    function: testing
+    app: curl
+spec:
+  containers:
+  - name: curl
+    image: curlimages/curl:latest
+    command: ["sleep", "infinity"]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpine
+  labels:
+    function: testing
+    app: alpine
+spec:
+  containers:
+  - name: alpine
+    image: alpine:latest
+    command: ["sleep", "infinity"]
