@@ -79,9 +79,9 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![Dep1-11](Deployments/Dep1-11.jpg)
 - 2025-08-19 Deploy invalid image, confirm rollout error, validate broken pods and correct replica count.
   ![Dep1-12](Deployments/Dep1-12.jpg)
-- 2025-08-19 Rollback deployment, confirm pods terminated and correct replicas running.
+- 2025-08-19 Rollback deployment, confirm pods terminated and correct replicas running.  
   ![Dep1-13](Deployments/Dep1-13.jpg)
-- 2025-08-19 Validate image version rolled back.
+- 2025-08-19 Validate image version rolled back.  
   ![Dep1-14](Deployments/Dep1-14.jpg)
 - 2025-08-19 Confirm replica count via deployment description.
   ![Dep1-15](Deployments/Dep1-15.jpg)
