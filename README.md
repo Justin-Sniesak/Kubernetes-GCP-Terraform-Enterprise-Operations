@@ -252,13 +252,13 @@ This environment supports end-to-end experimentation, including cluster provisio
 - 2025-08-17: Confirm correct number of pods defined in the ReplicaSet are running.
   ![rs1-4](ReplicaSets/rs1-4.jpg)
 - 2025-08-17: Delete a pod and validate that ReplicaSet automatically creates a new pod; ensure 3/3 pods are running (HA validation).
-  ![RS1-5](ReplicaSets/RS1-5.jpg)
+  ![rs1-5](ReplicaSets/rs1-5.jpg)
 - 2025-08-17: Check details of the ReplicaSet, including replica and pod counts.
-  ![RS1-6](ReplicaSets/RS1-6.jpg)
+  ![rs1-6](ReplicaSets/rs1-6.jpg)
 - 2025-08-17: Edit ReplicaSet manifest to scale replicas to 4, confirm the fourth pod is created and running.
-  ![RS1-7](ReplicaSets/RS1-7.jpg)
+  ![rs1-7](ReplicaSets/rs1-7.jpg)
 - 2025-08-17: Scale down replicas to 2 using CLI without editing the manifest, validate only two pods are running.
-  ![RS1-8](ReplicaSets/RS1-8.jpg)
+  ![rs1-8](ReplicaSets/rs1-8.jpg)
   
 ## Security
 **Summary:** Creating certificates for Kubernetes components, signing them, managing gservice account keys, and creating Kubernetes secrets to secure sensitive credentials.
