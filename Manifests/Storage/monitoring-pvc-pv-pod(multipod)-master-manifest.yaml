@@ -1,0 +1,99 @@
+#Monitoring and Observability resources and objects go here
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: prompv
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: ""
+  hostPath: 
+    path: /tmp/prometheus
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: prompv
+  namespace: monitoring
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  volumeName: prompv 
+  storageClassName: ""
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: prometheus
+  namespace: monitoring
+  labels:
+    function: observability
+    app: prometheus
+spec:
+  containers:
+  - name: prometheus  
+    image: prom/prometheus:main
+    command: ["sleep", "infinity"]
+    volumeMounts:
+    - mountPath: /data
+      name: prompv
+  volumes:
+  - name: prompv
+    persistentVolumeClaim: 
+      claimName: prompv 
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: grafanapv
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: ""
+  hostPath: 
+    path: /tmp/grafana
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: grafanapv 
+  namespace: monitoring
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  volumeName: grafanapv
+  storageClassName: ""
+--- 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: grafana
+  namespace: monitoring
+  labels:
+    function: monitoring
+    app: grafana 
+spec:
+  containers:
+  - name: grafana  
+    image: grafana/grafana:main-ubuntu
+    command: ["sleep", "infinity"]
+    volumeMounts:
+    - mountPath: /data
+      name: grafanapv 
+  volumes:
+  - name: grafanapv
+    persistentVolumeClaim: 
+      claimName: grafanapv 

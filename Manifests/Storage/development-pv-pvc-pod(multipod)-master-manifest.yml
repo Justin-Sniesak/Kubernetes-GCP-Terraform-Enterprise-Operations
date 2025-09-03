@@ -1,0 +1,98 @@
+#Development objects and resources go here
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: golangpv
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: ""
+  hostPath: 
+    path: /tmp/go
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: golangpv
+  namespace: development 
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  volumeName: golangpv
+  storageClassName: ""
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: golang
+  namespace: development
+  labels:
+    function: development
+    app: golang 
+spec:
+  containers:
+  - name: golang  
+    image: golang:tip-alpine3.22
+    command: ["sleep", "infinity"]
+    volumeMounts:
+    - mountPath: /data
+      name: golangpv
+  volumes:
+  - name: golangpv
+    persistentVolumeClaim: 
+      claimName: golangpv 
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: redispv
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: ""
+  hostPath: 
+    path: /tmp/redis
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: redispv 
+  namespace: development
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  volumeName: redispv
+  storageClassName: ""
+--- 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis
+  namespace: development
+  labels:
+    function: development
+    app: redis 
+spec:
+  containers:
+  - name: redis  
+    image: redis:latest
+    command: ["sleep", "infinity"]
+    volumeMounts:
+    - mountPath: /data
+      name: redispv 
+  volumes:
+  - name: redispv
+    persistentVolumeClaim: 
+      claimName: redispv 
