@@ -32,9 +32,11 @@ This environment supports end-to-end experimentation, including cluster provisio
 │   ├── Namespaces/
 │   ├── Networking/
 │   ├── Pods/
+│   ├── Prometheus/
 │   ├── ReplicaSets/
 │   ├── Security/
 │   ├── ServiceAccounts/
+│   ├── Scripts/
 │   ├── Storage/
 │   └── Terraform/
 ├── Manifests/                  # YAML manifests for Kubernetes resources
@@ -46,9 +48,11 @@ This environment supports end-to-end experimentation, including cluster provisio
 ├── Namespaces/                  # Namespace creation, management, and taint validation
 ├── Networking/                  # Network policies and troubleshooting
 ├── Pods/                        # Pod creation, validation, troubleshooting, volume testing
+├── Prometheus/                  # Monitoring and observability solution, scrapes for pod uptime
 ├── ReplicaSets/                 # ReplicaSet manifests, pod scaling, HA validation
 ├── Security/                    # Certificates, JSON keys, Kubernetes secrets
 ├── ServiceAccounts/             # Service account creation, JWT retrieval, pod attachment
+├── Scripts/                     # Bash scripting to automate Prometheus, Grafana and Kubernetes deployments and administration
 ├── Storage/                     # PersistentVolume (PV) and PersistentVolumeClaim (PVC) creation & validation
 └── Terraform/                   # Terraform manifests, provisioning, validation, and destruction
 ```
@@ -239,6 +243,16 @@ This environment supports end-to-end experimentation, including cluster provisio
 ![pod1-15](Pods/pod1-15.jpg)
 2025-09-02: Validate pod label selectors properly filter and sort pods by assigned labels.
 ![pod1-16](Pods/pod1-16.jpg)
+2025-09-07: Create config map for prometheus in monitoring namespace.
+![pod1-17](Pods/pod1-17.jpg)
+
+## Prometheus
+**Summary:** Covers monitoring and observability of pods, ensuring visibility into pod up status and overall health checks of defined metrics.
+
+- 2025-08-17: Create and run bash script -> this apply the manifest to the DNS services, pods and configmaps in the monitoring namespace, sleeps the prometheus podfor 20 seconds to allow time for it to initialize, starts port forwarding and finally internally exposes the Prometheus GUI so scraped data may be visualized.
+  ![prom1-1](Prometheus/prom1-1.jpg)
+- 2025-08-17: Validate the pods exposed to the prometheus service are showing up in monitoring and their up state may be validated under target health status.
+  ![prom1-2](Prometheus/prom1-2.jpg)
 
 ## ReplicaSets
 **Summary:** Covers ReplicaSet manifest creation, scaling, validating replica counts, and ensuring high availability by recreating deleted pods automatically.
