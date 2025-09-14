@@ -216,7 +216,9 @@ This environment supports end-to-end experimentation, including cluster provisio
 - 2025-09-14: OnPrem BareMetal hypervisor preperation - validate virtualization functionality is supported by the hardware, then confirm libvirtd is running which is a pre-requisite prior to install KVM followed by the ProxMox VE hypervisor.
   ![pm1-1](OnPremIaC/pm1-1.jpg)
 - 2025-09-14: Load modprobe, validate loaded and confirm nested Hypervisor virtualization is supported on hardware.
-  ![pm1-2](OnPremIaC/pm1-2.jpg)  
+  ![pm1-2](OnPremIaC/pm1-2.jpg)
+- 2025-09-14: Install KVM on hardware which is a pre-requisite to installing the ProxMoxVE hypervisor. 
+  ![pm1-3](OnPremIaC/pm1-3.jpg)  
 
 ## Pods
 **Summary:** Creation, management, troubleshooting, and validation of pods. Includes manifest writing, exec into containers, volume mounts, and pod lifecycle events.
