@@ -220,7 +220,9 @@ This environment supports end-to-end experimentation, including cluster provisio
 - 2025-09-14: Install KVM on hardware which is a pre-requisite to installing the ProxMoxVE hypervisor. 
   ![pm1-3](OnPremIaC/pm1-3.jpg)
 - 2025-09-14: Validate cores and threads per core hardware to ensure right-sizing of ProxMoxVE host and Alpine guests during provisioning.
-  ![pm1-4](OnPremIaC/pm1-4.jpg)  
+  ![pm1-4](OnPremIaC/pm1-4.jpg)
+- 2025-09-14: Install ProxMoxVE Hypervisor and validate can access and authenticate into the console.
+  ![pm1-5](OnPremIaC/pm1-5.jpg)  
 
 ## Pods
 **Summary:** Creation, management, troubleshooting, and validation of pods. Includes manifest writing, exec into containers, volume mounts, and pod lifecycle events.
