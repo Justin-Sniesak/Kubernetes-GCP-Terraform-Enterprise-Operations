@@ -215,7 +215,7 @@ This environment supports end-to-end experimentation, including cluster provisio
 
 - 2025-09-14: OnPrem BareMetal hypervisor preperation - validate virtualization functionality is supported by the hardware, then confirm libvirtd is running which is a pre-requisite prior to install KVM followed by the ProxMox VE hypervisor.
   ![pm1-1](OnPremIaC/pm1-1.jpg)
-- 2025-09-14: Load modprobe, validate loaded and confirm nested Hypervisor virtualization is supported on baremetal hardware - Baremetal install of KVM followed by deploying ProxMox VE as a type-1 hypervisor to support Alpine guests for deploying Kubernetes on-prem cluster.
+- 2025-09-14: Load modprobe, validate loaded and confirm nested Hypervisor virtualization is supported on hardware.
   ![pm1-2](OnPremIaC/pm1-2.jpg)  
 
 ## Pods
