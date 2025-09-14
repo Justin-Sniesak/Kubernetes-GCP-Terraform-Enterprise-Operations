@@ -31,6 +31,7 @@ This environment supports end-to-end experimentation, including cluster provisio
 │   ├── Minikube/
 │   ├── Namespaces/
 │   ├── Networking/
+│   ├── OnPremIaC/
 │   ├── Pods/
 │   ├── Prometheus/
 │   ├── ReplicaSets/
@@ -47,6 +48,7 @@ This environment supports end-to-end experimentation, including cluster provisio
 ├── Minikube/                    # Local Kubernetes cluster setup, load balancer, filesystem management
 ├── Namespaces/                  # Namespace creation, management, and taint validation
 ├── Networking/                  # Network policies and troubleshooting
+├── OnPremIaC/                   # OnPrem Hypervisor & VM management, configuration and troubleshooting
 ├── Pods/                        # Pod creation, validation, troubleshooting, volume testing
 ├── Prometheus/                  # Monitoring and observability solution, scrapes for pod uptime
 ├── ReplicaSets/                 # ReplicaSet manifests, pod scaling, HA validation
@@ -54,10 +56,10 @@ This environment supports end-to-end experimentation, including cluster provisio
 ├── ServiceAccounts/             # Service account creation, JWT retrieval, pod attachment
 ├── Scripts/                     # Bash scripting to automate Prometheus, Grafana and Kubernetes deployments and administration
 ├── Storage/                     # PersistentVolume (PV) and PersistentVolumeClaim (PVC) creation & validation
-└── Terraform/                   # Terraform manifests, provisioning, validation, and destruction
+└── Terraform/                   # Terraform manifests, IaC & troubleshooting
 ```
 ## Deployments
-**Summary:** This section covers creating, updating, rolling out, scaling, and troubleshooting Kubernetes deployments. Demonstrates knowledge of pod lifecycle, replication, rollout strategies, annotations, and error handling.
+**Summary:** Creating, updating, rolling out, scaling, and troubleshooting Kubernetes deployments. Pod lifecycle managemnent, replication, rollout strategies, annotations, and error handling.
 
 - 2025-08-17 Create deployment manifest, deploy, and validate pod status.
   ![Dep1-1](Deployments/Dep1-1.jpg)
@@ -91,7 +93,7 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![Dep1-15](Deployments/Dep1-15.jpg)
 
 ## Docker
-**Summary:** This section demonstrates installing Docker, launching containers, creating and mounting volumes, and validating persistent storage at the container level.
+**Summary:** Installing Docker, launching containers, creating and mounting volumes, and validating persistent storage at the container level.
 
 - 2025-08-13 Install Docker and launch Hello World container.
   ![doc1-1](Docker/doc1-1.jpg)
@@ -103,7 +105,7 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![doc1-4](Docker/doc1-4.jpg)
 
 ## GCP
-**Summary:** This section covers provisioning compute resources and storage buckets, configuring IAM and gservice accounts, managing billing, creating snapshots, and enabling authentication from local workstation. Emphasizes cloud operations and observability.
+**Summary:** Provisioning compute resources and storage buckets, configuring IAM and gservice accounts, managing billing, creating snapshots, and enabling authentication from local workstation. Emphasis on cloud operations and observability.
 
 - 2025-08-29 Create storage buckets in GCP project for compute VMs, Prometheus monitoring/observability, and Kubernetes.
   ![gcp1-1](GCP/gcp1-1.jpg)
@@ -191,7 +193,7 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![mk1-8](Minikube/mk1-8.jpg)
 
 ## Namespaces
-**Summary:** Demonstrates creating and managing Kubernetes namespaces, validating taints, and applying proper namespace scoping for resources.
+**Summary:** Creating and managing Kubernetes namespaces, validating taints, and applying proper namespace scoping for resources.
 
 - 2025-08-19: Create namespace using manifest, then create the first namespace.
   ![ns1-1](Namespaces/ns1-1.jpg)
@@ -203,10 +205,13 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![ns1-4](Namespaces/ns1-4.jpg)
 
 ## Networking
-**Summary:** Covers applying network policies, identifying manifest errors, and validating connectivity to pods, showing hands-on troubleshooting skills for Kubernetes networking.
+**Summary:** Applying network policies, identifying manifest errors, and validating connectivity to pods.
 
 - 2025-08-24: TROUBLESHOOTING: Create a network policy manifest, apply it to the node, identify and correct JSON errors in the manifest, apply changes, and validate the policy is correctly applied to the pod.
   ![Net1-1](Networking/Net1-1.jpg)  
+
+## OnPremIaC
+**Summary:** Hypervisor and VMs management and troubleshooting. RBAC administration and enforcement via API authentication, administration and troubleshooting.
 
 ## Pods
 **Summary:** Creation, management, troubleshooting, and validation of pods. Includes manifest writing, exec into containers, volume mounts, and pod lifecycle events.
@@ -247,7 +252,7 @@ This environment supports end-to-end experimentation, including cluster provisio
 ![pod1-17](Pods/pod1-17.jpg)
 
 ## Prometheus
-**Summary:** Covers monitoring and observability of pods, ensuring visibility into pod up status and overall health checks of defined metrics.
+**Summary:** Monitoring and observability of pods, ensuring visibility into pod up status and overall health checks of defined metrics.
 
 - 2025-08-17: Create and run bash script -> this apply the manifest to the DNS services, pods and configmaps in the monitoring namespace, sleeps the prometheus podfor 20 seconds to allow time for it to initialize, starts port forwarding and finally internally exposes the Prometheus GUI so scraped data may be visualized.
   ![prom1-1](Prometheus/prom1-1.jpg)
@@ -255,7 +260,7 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![prom1-2](Prometheus/prom1-2.jpg)
 
 ## ReplicaSets
-**Summary:** Covers ReplicaSet manifest creation, scaling, validating replica counts, and ensuring high availability by recreating deleted pods automatically.
+**Summary:** ReplicaSet manifest creation, scaling, validating replica counts, and ensuring high availability.
 
 - 2025-08-17: Create ReplicaSet manifest in Visual Studio Code, validate accessibility via bash.
   ![rs1-1](ReplicaSets/rs1-1.jpg)
@@ -275,7 +280,7 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![rs1-8](ReplicaSets/rs1-8.jpg)
   
 ## Security
-**Summary:** Creating certificates for Kubernetes components, signing them, managing gservice account keys, and creating Kubernetes secrets to secure sensitive credentials.
+**Summary:** Certificate creation for Kubernetes - signing, managing gservice account keys, and creating Kubernetes secrets to secure sensitive credentials.
 
 - 2025-08-21: Create the root certificate.
   ![sec1-1](Security/sec1-1.jpg)
@@ -291,7 +296,7 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![sec1-6](Security/sec1-6.jpg)
 
 ## ServiceAccounts
-**Summary:** Demonstrates creation of service accounts, attaching them to pods, decoding JWT tokens, validating token TTL, and troubleshooting service account deployment issues.
+**Summary:** Service account creation, attaching io pods, decoding JWT tokens, validating token TTL, and troubleshooting service account deployment issues.
 
 - 2025-08-21: Create a service account, validate on the node, describe the service account.
   ![SA1-1](ServiceAccounts/SA1-1.jpg)
@@ -305,7 +310,7 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![SA1-5](ServiceAccounts/SA1-5.jpg)
 
 ## Storage
-**Summary:** Demonstrates PersistentVolume (PV) and PersistentVolumeClaim (PVC) creation, ephemeral storage validation, mounting across pods, multi-namespace validation, and StorageClass creation.
+**Summary:** PersistentVolume (PV) and PersistentVolumeClaim (PVC) creation, ephemeral storage validation, mounting across pods, multi-namespace validation, and StorageClass creation.
 
 - 2025-09-01: Write PersistentVolume manifest for both Redis and Nginx pods, validate creation and review details via kubectl describe.
   ![stor1-1](Storage/stor1-1.jpg)
@@ -325,7 +330,7 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![stor1-8](Storage/stor1-8.jpg)
 
 ## Terraform
-**Summary:** Shows declarative infrastructure management in GCP including installing Terraform, initializing, planning, applying manifests, and destroying resources declaratively.
+**Summary:** Declarative infrastructure management in GCP and on-prem including installing Terraform, initializing, planning, applying manifests, and destroying resources declaratively.
 
 - 2025-08-29: Install Terraform and validate on primary GCP VM.
   ![tf1-1](Terraform/tf1-1.jpg)
