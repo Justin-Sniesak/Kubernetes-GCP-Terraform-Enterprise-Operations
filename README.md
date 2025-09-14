@@ -221,8 +221,8 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![pm1-3](OnPremIaC/pm1-3.jpg)
 - 2025-09-14: Validate cores and threads per core hardware to ensure right-sizing of ProxMoxVE host and Alpine guests during provisioning.
   ![pm1-4](OnPremIaC/pm1-4.jpg)
-- 2025-09-14: Install ProxMoxVE Hypervisor and validate can access and authenticate into the console.
-  ![pm1-5](OnPremIaC/pm1-5.jpg)
+- 2025-09-14: Install ProxMoxVE Hypervisor and validate can access and authenticate into the console.  
+- ![pm1-5](OnPremIaC/pm1-5.jpg)
 - 2025-09-14: Post install of ProxMoxVE Hypervisor, validate GUI is up and can authenticate in.
   ![pm1-6](OnPremIaC/pm1-6.jpg)  
 
