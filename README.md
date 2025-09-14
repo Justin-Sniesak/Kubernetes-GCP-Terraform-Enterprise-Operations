@@ -213,6 +213,9 @@ This environment supports end-to-end experimentation, including cluster provisio
 ## OnPremIaC
 **Summary:** Hypervisor and VMs management and troubleshooting. RBAC administration and enforcement via API authentication, administration and troubleshooting.
 
+- 2025-09-14: OnPrem BareMetal hypervisor preperation - validate virtualization functionality is supported by the hardware, then confirm libvirtd is running which is a pre-requisite prior to install KVM followed by the ProxMox VE hypervisor.
+  ![pm1-1](OnPremIaC/pm1-1.jpg)  
+
 ## Pods
 **Summary:** Creation, management, troubleshooting, and validation of pods. Includes manifest writing, exec into containers, volume mounts, and pod lifecycle events.
 
