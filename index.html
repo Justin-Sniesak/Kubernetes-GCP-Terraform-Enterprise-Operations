@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes, GCP, Terraform, IaC & Go Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .bg-custom-dark {
+            background-color: #1a202c;
+        }
+        .text-custom-light {
+            color: #e2e8f0;
+        }
+        .border-custom-gray {
+            border-color: #4a5568;
+        }
+        .bg-custom-gray {
+            background-color: #2d3748;
+        }
+        .hover-bg-accent:hover {
+            background-color: #4c51bf;
+        }
+        .active-link {
+            background-color: #4c51bf;
+        }
+    </style>
+</head>
+<body class="bg-custom-dark text-custom-light">
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <!-- Sidebar Navigation -->
+        <aside class="w-full md:w-1/4 p-6 bg-custom-gray border-r border-custom-gray md:h-screen md:sticky md:top-0 overflow-y-auto">
+            <h1 class="text-2xl font-bold mb-6 text-white">Project Portfolio</h1>
+            <nav>
+                <ul class="space-y-2">
+                    <li><a href="#cloud-scope" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">Cloud Scope & Environment</a></li>
+                    <li><a href="#deployments" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">Cloud Deployments</a></li>
+                    <li><a href="#docker" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">Docker</a></li>
+                    <li><a href="#gcp" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">GCP</a></li>
+                    <li><a href="#istio" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">Istio</a></li>
+                    <li><a href="#minikube" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">Minikube</a></li>
+                    <li><a href="#namespaces" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">Namespaces</a></li>
+                    <li><a href="#networking" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">Networking</a></li>
+                    <li><a href="#onpremlac" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">On-Prem IaC</a></li>
+                    <li><a href="#pods" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">Pods</a></li>
+                    <li><a href="#prometheus" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">Prometheus</a></li>
+                    <li><a href="#replicasets" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">ReplicaSets</a></li>
+                    <li><a href="#security" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">Security</a></li>
+                    <li><a href="#serviceaccounts" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">Service Accounts</a></li>
+                    <li><a href="#storage" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">Storage</a></li>
+                    <li><a href="#terraform" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">Terraform</a></li>
+                    <li><a href="#golang" class="block p-3 rounded-lg hover-bg-accent transition-colors duration-200 font-semibold text-sm">Golang Scripts & Code</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="w-full md:w-3/4 p-6 md:p-12">
+            <header class="mb-12 pb-4 border-b border-custom-gray">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white">Comprehensive Cloud Operations & Go</h1>
+                <p class="mt-4 text-lg text-custom-light max-w-2xl">This repository documents hands-on implementations across container orchestration, infrastructure as code, observability, security, and multi-environment cloud deployments, as well as Go scripting and code.</p>
+            </header>
+
+            <!-- K8s & GCP Scope Section -->
+            <section id="cloud-scope" class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 text-white">Cloud Scope & Environment</h2>
+                <div class="space-y-4 text-custom-light">
+                    <p>This repository captures comprehensive, enterprise-grade Kubernetes and GCP operations in a hybrid on-prem and cloud schema, including provisioning, automation, and troubleshooting. It documents hands-on implementations across container orchestration, infrastructure as code, observability, security, and multi-environment cloud deployments, demonstrating both practical expertise and real-world operational workflows.</p>
+                    <p>All projects, manifests, and exercises reflect production-style scenarios, showcasing the ability to deploy, manage, and troubleshoot complex Kubernetes clusters and cloud resources efficiently.</p>
+                    <h3 class="text-2xl font-semibold mt-8 mb-2 text-white">Environment</h3>
+                    <p>This lab was executed on a modern enterprise Kubernetes and GCP stack, including the following core tools and platforms:</p>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li><strong>Operating Systems:</strong> Ubuntu 24.04 LTS, Alipine Linux 3.22</li>
+                        <li><strong>Hypervisor:</strong> KVM 8.2.2, ProxMoxVE 9.0.3</li>
+                        <li><strong>Containerization:</strong> Docker 28.3.3</li>
+                        <li><strong>Kubernetes:</strong> kubectl 1.33.4, Minikube v1.33.1</li>
+                        <li><strong>Service Mesh:</strong> Istio 1.27.0 (demo profile)</li>
+                        <li><strong>Infrastructure as Code:</strong> Terraform v1.13.1</li>
+                        <li><strong>Cloud Platform:</strong> Google Cloud Platform (Compute Engine, Cloud Storage, IAM, Billing, gcloud CLI)</li>
+                        <li><strong>Development Tools:</strong> Visual Studio Code v1.103.1, YAML manifests, Terraform configuation files</li>
+                    </ul>
+                    <p>This environment supports end-to-end experimentation, including cluster provisioning, service deployment, monitoring, storage management, networking, and security validation across multiple namespaces and cloud resources.</p>
+                </div>
+            </section>
+
+            <!-- K8s Deployments Section -->
+            <section id="deployments" class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 text-white">Cloud Deployments</h2>
+                <div class="space-y-6">
+                    <p class="text-custom-light"><strong>Summary:</strong> Creating, updating, rolling out, scaling, and troubleshooting Kubernetes deployments. Pod lifecycle managemnent, replication, rollout strategies, annotations, and error handling.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-17:</span>
+                            <p class="flex-1">Create deployment manifest, deploy, and validate pod status.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=Dep1-1.jpg" alt="Screenshot of deployment manifest and pod status validation" class="rounded-lg shadow-lg">
+                        
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-17:</span>
+                            <p class="flex-1">Validate deployment details.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=Dep1-2.jpg" alt="Screenshot of detailed deployment status" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-17:</span>
+                            <p class="flex-1">Validate auto-scaling of replicas per deployment specifications.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=Dep1-3.jpg" alt="Screenshot demonstrating auto-scaling" class="rounded-lg shadow-lg">
+                        
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-17:</span>
+                            <p class="flex-1">Confirm all components are running and in intended state.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=Dep1-4.jpg" alt="Screenshot confirming all components are running" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-17:</span>
+                            <p class="flex-1">Delete deployment, scale replicas, create new deployment, validate replicas and health.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=Dep1-5.jpg" alt="Screenshot of deployment scaling and health validation" class="rounded-lg shadow-lg">
+                        
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-17:</span>
+                            <p class="flex-1">Rollout new deployment, validate 6/6 pods are up and healthy.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=Dep1-6.jpg" alt="Screenshot of new deployment rollout" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-17:</span>
+                            <p class="flex-1">Annotate deployment, roll it out, check history, confirm change-cause annotation.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=Dep1-7.jpg" alt="Screenshot of deployment annotation and history" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-17:</span>
+                            <p class="flex-1">Validate change-cause in deployment description.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=Dep1-8.jpg" alt="Screenshot validating change-cause annotation" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-17:</span>
+                            <p class="flex-1">Update deployment image, annotate change-cause, rollout, validate history.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=Dep1-9.jpg" alt="Screenshot of image update and history" class="rounded-lg shadow-lg">
+                        
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-17:</span>
+                            <p class="flex-1">Validate scaling of replicas.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=Dep1-10.jpg" alt="Screenshot validating replica scaling" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-17:</span>
+                            <p class="flex-1">Downgrade deployment (fail), rollback, validate change-cause annotations and pod health.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=Dep1-11.jpg" alt="Screenshot of failed downgrade and successful rollback" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-19:</span>
+                            <p class="flex-1">Deploy invalid image, confirm rollout error, validate broken pods and correct replica count.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=Dep1-12.jpg" alt="Screenshot of invalid image deployment error" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-19:</span>
+                            <p class="flex-1">Rollback deployment, confirm pods terminated and correct replicas running.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=Dep1-13.jpg" alt="Screenshot of deployment rollback" class="rounded-lg shadow-lg">
+                        
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-19:</span>
+                            <p class="flex-1">Validate image version rolled back.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=Dep1-14.jpg" alt="Screenshot validating rolled back image version" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-19:</span>
+                            <p class="flex-1">Confirm replica count via deployment description.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=Dep1-15.jpg" alt="Screenshot confirming replica count" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Docker Section -->
+            <section id="docker" class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 text-white">Docker</h2>
+                <div class="space-y-6">
+                    <p class="text-custom-light"><strong>Summary:</strong> Installing Docker, launching containers, creating and mounting volumes, and validating persistent storage at the container level.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-13:</span>
+                            <p class="flex-1">Install Docker and launch Hello World container.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=doc1-1.jpg" alt="Screenshot of Docker installation and Hello World container" class="rounded-lg shadow-lg">
+                        
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-13:</span>
+                            <p class="flex-1">Validate locally installed Docker version.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=doc1-2.jpg" alt="Screenshot validating Docker version" class="rounded-lg shadow-lg">
+                        
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-01:</span>
+                            <p class="flex-1">Create local volume on node, validate availability.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=doc1-3.jpg" alt="Screenshot creating and validating a local Docker volume" class="rounded-lg shadow-lg">
+                        
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-01:</span>
+                            <p class="flex-1">Start container with attached local volume, validate pod writing to volume, connect via exec -it, confirm data written.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=doc1-4.jpg" alt="Screenshot showing a container with a volume and data persistence" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </section>
+
+            <!-- GCP Section -->
+            <section id="gcp" class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 text-white">GCP</h2>
+                <div class="space-y-6">
+                    <p class="text-custom-light"><strong>Summary:</strong> Provisioning compute resources and storage buckets, configuring IAM and gservice accounts, managing billing, creating snapshots, and enabling authentication from local workstation. Emphasis on cloud operations and observability.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-29:</span>
+                            <p class="flex-1">Create storage buckets in GCP project for compute VMs, Prometheus monitoring/observability, and Kubernetes.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=gcp1-1.jpg" alt="Screenshot of created GCP storage buckets" class="rounded-lg shadow-lg">
+                        
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-29:</span>
+                            <p class="flex-1">Create primary VM in GCP project to provision worker VMs with Terraform.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=gcp1-2.jpg" alt="Screenshot of primary VM creation in GCP" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-29:</span>
+                            <p class="flex-1">Create RSA keypair on main workstation to facilitate SSH authentication to primary GCP VM.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=gcp1-3.jpg" alt="Screenshot of RSA keypair generation" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-29:</span>
+                            <p class="flex-1">Add public key to primary GCP VM, validate SSH authentication from main workstation.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=gcp1-4.jpg" alt="Screenshot validating SSH access to the GCP VM" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-29:</span>
+                            <p class="flex-1">Create bash script on primary workstation to facilitate faster SSH authentication to primary GCP VM.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=gcp1-5.jpg" alt="Screenshot of a bash script for SSH automation" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-29:</span>
+                            <p class="flex-1">Change primary Terraform GCP VM IP type to standard ephemeral and network type to standard in GCP Compute.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=gcp1-6.jpg" alt="Screenshot of GCP VM network settings" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-08-29:</span>
+                            <p class="flex-1">Install and validate the gcloud shell on main workstation.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=gcp1-7.jpg" alt="Screenshot of gcloud installation and validation" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-02:</span>
+                            <p class="flex-1">Review and analyze overall spend for the month in Billing.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=gcp1-11.jpg" alt="Screenshot of GCP billing dashboard" class="rounded-lg shadow-lg">
+                        
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-02:</span>
+                            <p class="flex-1">Additional review and analysis of spend by project and service.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=gcp1-12.jpg" alt="Screenshot of GCP billing by project and service" class="rounded-lg shadow-lg">
+                        
+                        <!-- The rest of the Cloud sections would go here... -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Go Section -->
+            <section id="golang" class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 text-white">Golang Scripts & Code</h2>
+                <div class="space-y-6 text-custom-light">
+                    <!-- Go Scope & Environment -->
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-semibold mb-2 text-white">Scope & Environment</h3>
+                        <p>Go scripts and code - written, tested, and debugged.</p>
+                        <h4 class="text-xl font-medium mt-4 mb-2 text-white">Environment</h4>
+                        <ul class="list-disc list-inside space-y-1 pl-4">
+                            <li>Operating System: Ubuntu 24.04 LTS</li>
+                            <li>Golang: 1.22.2</li>
+                        </ul>
+                    </div>
+
+                    <!-- Go Deployments Section -->
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-semibold mt-8 mb-2 text-white">Deployments</h3>
+                        <p><strong>Summary:</strong> This section covers anything misc related to this project, such as compiler installation and version validation.</p>
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-04:</span>
+                            <p class="flex-1">Install Go compiler locally and validate version.</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=misc1-1.jpg" alt="Screenshot of Go compiler installation" class="rounded-lg shadow-lg">
+                    </div>
+
+                    <!-- Go Code Section -->
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-semibold mt-8 mb-2 text-white">Code</h3>
+                        <p><strong>Summary:</strong> This section covers anything misc related to this project, such as compiler installation and version validation.</p>
+                        <!-- NOTE: I've included the summary as you had it, even though it's the same as the Deployments section. You can edit this. -->
+                    </div>
+
+                    <!-- Go Scripts Section -->
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-semibold mt-8 mb-2 text-white">Scripts</h3>
+                        <p><strong>Summary:</strong> This section all scripts written in Go. Includes what they do and expected outcome, also includes any errors and debugging encountered.</p>
+                        
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-04:</span>
+                            <p class="flex-1">Outputs "Good Evening" to the terminal. `good-evening.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-1.jpg" alt="Output of good-evening script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-04:</span>
+                            <p class="flex-1">Outputs "Hi, my name is Justin" to the terminal. `greeting.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-2.jpg" alt="Output of greeting script, including an error" class="rounded-lg shadow-lg">
+                        
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-06:</span>
+                            <p class="flex-1">Outputs "The weather is nice today" to the terminal. `weather.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-3.jpg" alt="Output of weather script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-06:</span>
+                            <p class="flex-1">Assigns a string statement to the time variable then outputs the string to the terminal. `time.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-4.jpg" alt="Output of time script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-06:</span>
+                            <p class="flex-1">Assigns a string to two different variables, then joins a string to both variables and prints to the terminal. `name-location-opinion.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-5.jpg" alt="Output of name-location-opinion script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-06:</span>
+                            <p class="flex-1">Assigns a string to three different variables, then prints all three to the terminal, with each being printed to a newline on the terminal via the newline character. `name-location-opinion-newline.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-6.jpg" alt="Output of name-location-opinion-newline script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-06:</span>
+                            <p class="flex-1">Assigns a string to three different variables, then prints all three to the terminal, with each being printed to a newline on the terminal via the Println function. `name-location-opinion-println.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-7.jpg" alt="Output of name-location-opinion-println script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-06:</span>
+                            <p class="flex-1">Calls the main function, assigns a string and a float to two different variables, then uses Printf to combine each in a string output to the terminal. `months.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-8.jpg" alt="Output of months script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-07:</span>
+                            <p class="flex-1">Calls the main function, defines two string variables using shorthand and outputting each to the terminal on a seperate line. `shorthand.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-9.jpg" alt="Output of shorthand script" class="rounded-lg shadow-lg">
+                        
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-10:</span>
+                            <p class="flex-1">Calls the main function, define two string variables and one integer variable using shorthand and outputting each to the terminal on a seperate line. `shorthand_expanded.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-10.jpg" alt="Output of shorthand_expanded script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-11:</span>
+                            <p class="flex-1">Calls the main function, defines three string variables, one in the outer block and two in the inner block using shorthand and outputting all to the terminal on seperate lines `outer_inner_blocks.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-11.jpg" alt="Output of outer_inner_blocks script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-11:</span>
+                            <p class="flex-1">Do not assign a value to any of the data types defined in a variable, print to terminal which returns the default zero value for each `zero_values.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-12.jpg" alt="Output of zero_value script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-11:</span>
+                            <p class="flex-1">Defines (3) string vars, (1) bool var and (1) float64 var. Then, prints each var on a new line requesting the user enter the desired input matched per data type. `user_input.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-13.jpg" alt="Output of user_input script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-14:</span>
+                            <p class="flex-1">Do not assign a value to any of the defined variables, print to the terminal, which then returns the default zero value for each. `variable_types.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-14.jpg" alt="Output of variable_types script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-14:</span>
+                            <p class="flex-1">Defines a var of each data type, prints the output of the variables along with the associated data type to the terminal using the reflect.TypeOf function. `variable_types_typeof.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-15.jpg" alt="Output of variable_types_typeof script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-14:</span>
+                            <p class="flex-1">Assigns an integer and a float64 data type to two different variables, then uses Printf to combine each into an float64 datatype that is output to the terminal. `int_to_float64.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-16.jpg" alt="Output of int_to_float64 script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-14:</span>
+                            <p class="flex-1">Assigns an integer and a float64 data type to two different variables, then uses Printf to combine each into a integer data type that is output to the terminal. `float64_to_int.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-17.jpg" alt="Output of float64_to_int script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-14:</span>
+                            <p class="flex-1">Assigns an integer and a string data type to two different variables, then uses Printf to combine each into a string data type that is output to the terminal. `int_to_str.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-18.jpg" alt="Output of int_to_str script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-14:</span>
+                            <p class="flex-1">Assigns a string and integer data type to two different variables, then uses Atoi to convert the str to an int on the terminal along with the data type, also returns there are not any errors. `str_to_int_noerr.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-19.jpg" alt="Output of str_to_int_noerr script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-14:</span>
+                            <p class="flex-1">Assigns an integer and a string data type to two different variables, then uses Printf to combine each into a string data type that is output to the terminal, along with intentionally outputting an error. `str_to_int_err.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-20.jpg" alt="Output of str_to_int_err script" class="rounded-lg shadow-lg">
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-sm font-semibold text-custom-light w-24">2025-09-14:</span>
+                            <p class="flex-1">Defines two constants, a third constant with a division equation, then prints a string, the result, and a second string to the terminal. `constants.go`</p>
+                        </div>
+                        <img src="https://placehold.co/800x400/2d3748/e2e8f0?text=scr1-21.jpg" alt="Output of constants script" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
