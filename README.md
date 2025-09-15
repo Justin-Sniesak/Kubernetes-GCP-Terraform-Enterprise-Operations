@@ -228,7 +228,9 @@ This environment supports end-to-end experimentation, including cluster provisio
 - 2025-09-14: Post install of ProxMoxVE Hypervisor, validate GUI is up and can authenticate in.
   ![pm1-6](OnPremIaC/pm1-6.jpg)
 - 2025-09-14: Install both terraform and lsb-release on ProxMoxVE hypervisor.
-  ![pm1-7](OnPremIaC/pm1-7.jpg)  
+  ![pm1-7](OnPremIaC/pm1-7.jpg)
+- 2025-09-14: Create API authentication tokens for all user/service accounts on Hypervisor, enforce expiration on each IAW regular token rotation.jpg
+  ![pm1-8](OnPremIaC/pm1-8.jpg)  
 
 ## Pods
 **Summary:** Creation, management, troubleshooting, and validation of pods. Includes manifest writing, exec into containers, volume mounts, and pod lifecycle events.
