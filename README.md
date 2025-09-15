@@ -229,7 +229,7 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![pm1-6](OnPremIaC/pm1-6.jpg)
 - 2025-09-14: Install both terraform and lsb-release on ProxMoxVE hypervisor.
   ![pm1-7](OnPremIaC/pm1-7.jpg)
-- 2025-09-14: Create API authentication tokens for all user/service accounts on Hypervisor, enforce expiration on each IAW regular token rotation.jpg
+- 2025-09-14: Create API authentication tokens for all user/service accounts on Hypervisor, enforce expiration on each IAW regular token rotation policy.
   ![pm1-8](OnPremIaC/pm1-8.jpg)  
 
 ## Pods
