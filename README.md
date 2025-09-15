@@ -20,7 +20,7 @@ Infrastructure as Code: Terraform v1.13.1
 
 Cloud Platform: Google Cloud Platform (Compute Engine, Cloud Storage, IAM, Billing, gcloud CLI)
 
-Development Tools: Visual Studio Code v1.103.1, YAML manifests
+Development Tools: Visual Studio Code v1.103.1, YAML manifests, Terraform configuation files
 
 This environment supports end-to-end experimentation, including cluster provisioning, service deployment, monitoring, storage management, networking, and security validation across multiple namespaces and cloud resources.
 ```
