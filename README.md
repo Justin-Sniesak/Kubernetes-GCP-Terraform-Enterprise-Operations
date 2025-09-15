@@ -233,7 +233,7 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![pm1-8](OnPremIaC/pm1-8.jpg)
 - 2025-09-14: Create user and service accounts on ProxMox hypervisor.
   ![pm1-9](OnPremIaC/pm1-9.jpg)
-- 2025-09-14: Map users and API tokens to required roles and filesystems as part of RBAC provisioning on hypervisor.jpg
+- 2025-09-14: Map users and API tokens to required roles and filesystems as part of RBAC schema on hypervisor.
   ![pm1-10](OnPremIaC/pm1-10.jpg)  
 
 ## Pods
