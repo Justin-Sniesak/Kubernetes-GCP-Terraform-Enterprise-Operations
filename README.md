@@ -147,6 +147,8 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![gcp1-19](GCP/gcp1-19.jpg)
 - 2025-09-02 Create multiple service accounts, assign Storage Admin IAM bindings via gcloud.
   ![gcp1-20](GCP/gcp1-20.jpg)
+- 2025-09-02 Enable Secret Manager in GCP project.
+  ![gcp1-21](GCP/gcp1-21.jpg)
 
 ## Istio
 **Summary:** Installation and validation of Istio service mesh, deploying sample applications, creating gateways, exposing services externally, and validating ingress traffic.
