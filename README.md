@@ -159,6 +159,8 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![gcp1-25](GCP/gcp1-25.jpg)
 - 2025-09-19 Activate compute engine service account and confirm active using gcloud shell.
   ![gcp1-26](GCP/gcp1-26.jpg)
+- 2025-09-19 Assign firewall tag to VM to apply rule from firewall to all ingress traffic (Block ingress port 22 traffic - SSH)
+  ![gcp1-27](GCP/gcp1-27.jpg)
 
 ## Istio
 **Summary:** Installation and validation of Istio service mesh, deploying sample applications, creating gateways, exposing services externally, and validating ingress traffic.
