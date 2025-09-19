@@ -16,7 +16,7 @@ Service Mesh: Istio 1.27.0 (demo profile)
 
 Infrastructure as Code: Terraform v1.13.1
 
-Cloud Platform: Google Cloud Platform (Compute Engine, Cloud Storage, IAM, Billing, gcloud CLI, Secrets Manager)
+Cloud Platform: Google Cloud Platform (Compute Engine, Cloud Storage, IAM, Billing, gcloud CLI, Secrets Manager, Firewall)
 
 Development Tools: Visual Studio Code v1.103.1, YAML manifests, Terraform configuation files
 
@@ -155,8 +155,10 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![gcp1-23](GCP/gcp1-23.jpg)
 - 2025-09-19 Prevent oslogin in compute engine VM.
   ![gcp1-24](GCP/gcp1-24.jpg)
-- 2025-09-19 Create a firewall rule blocking all ingress traffic on port 22 (ssh).
+- 2025-09-19 Create a firewall rule blocking all ingress traffic on port 22 (ssh), also create network tag for compuite engine VM.
   ![gcp1-25](GCP/gcp1-25.jpg)
+- 2025-09-19 Activate compute engine service account and confirm active using gcloud shell.
+  ![gcp1-26](GCP/gcp1-26.jpg)
 
 ## Istio
 **Summary:** Installation and validation of Istio service mesh, deploying sample applications, creating gateways, exposing services externally, and validating ingress traffic.
