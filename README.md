@@ -163,6 +163,8 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![gcp1-27](GCP/gcp1-27.jpg)
 - 2025-09-19 Validate ingress SSH attempts in primary compute engine VM are blocked.
   ![gcp1-28](GCP/gcp1-28.jpg)
+- 2025-09-19 Migrate all API keys to Secrets manager.
+  ![gcp1-29](GCP/gcp1-29.jpg)
 
 ## Istio
 **Summary:** Installation and validation of Istio service mesh, deploying sample applications, creating gateways, exposing services externally, and validating ingress traffic.
