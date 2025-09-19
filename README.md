@@ -153,6 +153,8 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![gcp1-22](GCP/gcp1-22.jpg)
 - 2025-09-19 Disable SSH access to compute engine VM and delete all SSH keys.
   ![gcp1-23](GCP/gcp1-23.jpg)
+- 2025-09-19 Prevent oslogin in compute engine VM.
+  ![gcp1-23](GCP/gcp1-24.jpg)
 
 ## Istio
 **Summary:** Installation and validation of Istio service mesh, deploying sample applications, creating gateways, exposing services externally, and validating ingress traffic.
