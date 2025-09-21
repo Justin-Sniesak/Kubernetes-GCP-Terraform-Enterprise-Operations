@@ -1,5 +1,5 @@
 ## Scope
-This repository captures comprehensive, enterprise-grade Kubernetes and GCP operations in a hybrid on-prem and cloud schema, including provisioning, automation, and troubleshooting. It documents hands-on implementations across container orchestration, infrastructure as code, observability, security, and multi-environment cloud deployments.
+Enterprise Kubernetes operations including multi-namespace deployments, bare-metal provisioning, and hybrid cloud architecture.
 
 ## Environment
 This lab was executed on a modern enterprise Kubernetes and GCP stack, including the following core tools and platforms:
