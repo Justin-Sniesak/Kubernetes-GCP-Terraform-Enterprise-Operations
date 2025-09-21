@@ -165,6 +165,8 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![gcp1-28](GCP/gcp1-28.jpg)
 - 2025-09-19 Migrate all API keys to Secrets manager.
   ![gcp1-29](GCP/gcp1-29.jpg)
+- 2025-09-20: Second smoke test, this time when logged into project console, validate SSH in browser to compute engine VM is blocked.
+  ![gcp1-30](GCP/tf1-30.jpg)
 
 ## Istio
 **Summary:** Installation and validation of Istio service mesh, deploying sample applications, creating gateways, exposing services externally, and validating ingress traffic.
@@ -391,3 +393,12 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![tf1-8](Terraform/tf1-8.jpg)
 - 2025-09-02: Compute infrastructure declaritivly provisioned on hypervisor using Terraform.
   ![tf1-9](Terraform/tf1-9.jpg)
+- 2025-09-20: TROUBLESHOOTING: Compute engine VMs not creating due to incorrect boot disk image URL defined in compute manifest via gcloud CLI.
+  ![tf1-10](Terraform/tf1-10.jpg)
+- 2025-09-20: Compute engine resource creation from laptop using service account authenticating via api and local install of Terraform.
+  ![tf1-11](Terraform/tf1-11.jpg)
+- 2025-09-20: Smoke Test creation of compute engine resources via Terraform in GCP from on-prem laptop.
+  ![tf1-12](Terraform/tf1-12.jpg)
+- 2025-09-20: Compute engine resource destruction from laptop using service account authenticating via api and local install of Terraform.
+  ![tf1-13](Terraform/tf1-13.jpg)
+
