@@ -165,7 +165,7 @@ This environment supports end-to-end experimentation, including cluster provisio
   ![gcp1-28](GCP/gcp1-28.jpg)
 - 2025-09-19 Migrate all API keys to Secrets manager.
   ![gcp1-29](GCP/gcp1-29.jpg)
-- 2025-09-20: Second smoke test, this time when logged into project console, validate SSH in browser to compute engine VM is blocked.
+- 2025-09-20: Second smoke test, this time when logged into project console, validate SSH in browser to compute engine VM is blocked.  
   ![gcp1-30](GCP/gcp1-30.jpg)
 
 ## Istio
