@@ -40,11 +40,11 @@ This environment supports end-to-end experimentation, including cluster provisio
 │   ├── Scripts/
 │   ├── Storage/
 │   └── Terraform/
-├── Manifests/                  # YAML manifests for Kubernetes resources
-├── Deployments/                # Deployment manifests & testing (rollouts, scaling, rollback)
-├── Docker/                     # Docker installation, container management, volumes
-├── GCP/                        # GCP provisioning, storage, VM management, billing, IAM
-├── Istio/                      # Service mesh setup, Bookclub demo app, gateway & virtual services
+├── Manifests/                   # YAML manifests for Kubernetes resources
+├── Deployments/                 # Deployment manifests & testing (rollouts, scaling, rollback)
+├── Docker/                      # Docker installation, container management, volumes
+├── GCP/                         # GCP provisioning, storage, VM management, billing, IAM
+├── Istio/                       # Service mesh setup, Bookclub demo app, gateway & virtual services
 ├── Minikube/                    # Local Kubernetes cluster setup, load balancer, filesystem management
 ├── Namespaces/                  # Namespace creation, management, and taint validation
 ├── Networking/                  # Network policies and troubleshooting
