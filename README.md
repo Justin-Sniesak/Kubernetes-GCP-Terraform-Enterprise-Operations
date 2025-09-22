@@ -4,7 +4,7 @@ Enterprise Kubernetes operations including multi-namespace deployments, bare-met
 ## Environment
 This lab was executed on a modern enterprise Kubernetes and GCP stack, including the following core tools and platforms:
 
-Operating Systems: Ubuntu 24.04 LTS, Alipine Linux 3.22
+Operating Systems: Ubuntu 24.04 LTS, Alpine Linux 3.22
 
 Hypervisor: KVM 8.2.2, ProxMoxVE 9.0.3
 
