@@ -1,6 +1,5 @@
 #This workflow automatically updates my Kubernetes page everytime I update my README.md with additional work completed I want to showcase
 name: Deploy Kubernetes/GCP/TF README.md updates to GitHub pages website
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
     branches:
