@@ -1,18 +1,30 @@
-name: GitHub Actions Demo
+#This workflow automatically updates my Kubernetes page everytime I update my README.md with additional work completed I want to showcase
+name: Deploy Kubernetes/GCP/TF README.md updates to GitHub pages website
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'README.md'
+      
 jobs:
-  Explore-GitHub-Actions:
+  build:
+    #Specifies the type of VM to create
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-        uses: actions/checkout@v5
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      #Step1 - Checks out the repo and clones to the VM
+      - name: Checkout Repository 
+        uses: actions/checkout@v4
+
+      #Step2 - Updates content of main page using the peaceiris tool
+      - name: Deploy from README.md
+        uses: peaceiris/actions-gh-pages@v3
+      #Configuration variables needed for the job to run
+        with: 
+          #Temp authentication token needed for the job to run
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          #Source destination - root
+          publish_dir: '.'
+          #Target destination - root
+          destination_dir: ''
