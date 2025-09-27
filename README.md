@@ -254,7 +254,9 @@ This environment supports end-to-end experimentation, including cluster provisio
 - 2025-09-14: Map users and API tokens to required roles and filesystems as part of RBAC schema on hypervisor.
   ![pm1-10](OnPremIaC/pm1-10.jpg)
 - 2025-09-14: Validate all VMs up and healthy on Hypervisor monitoring and observability dashboard.
-  ![pm1-11](OnPremIaC/pm1-11.jpg)   
+  ![pm1-11](OnPremIaC/pm1-11.jpg)
+- 2025-09-26: Configure guest on hypervisor, remove the ISO from guest boot sequence, reboot, validate script configurations settings survive guest reboot.
+  ![pm1-12](OnPremIaC/pm1-12.jpg) 
 
 ## Pods
 **Summary:** Creation, management, troubleshooting, and validation of pods. Includes manifest writing, exec into containers, volume mounts, and pod lifecycle events.
