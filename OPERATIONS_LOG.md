@@ -1,3 +1,6 @@
+## Troubleshooting Callout
+Over 15 distinct troubleshooting events were logged, demonstrating skills in resolving Docker image mismatches, pod crash loops, network policy JSON errors, and Terraform configuration failures across GCP and ProxMox.
+
 ## Deployments
 **Summary:** Creating, updating, rolling out, scaling, and troubleshooting Kubernetes deployments. Pod lifecycle managemnent, replication, rollout strategies, annotations, and error handling.
 
