@@ -1,25 +1,3 @@
-⚠️ Note: This repository is for personal reference and portfolio demonstration only. All workflows, manifests, and configurations are original, and not intended for public execution. Unauthorized use is prohibited.
-
-Overview
-
-This repository documents end-to-end enterprise Kubernetes operations, including multi-namespace deployments, hybrid cloud provisioning, and advanced observability. All experiments, manifests, and infrastructure-as-code were designed and executed independently, demonstrating rapid upskilling and application of modern cloud-native practices.
-
-Core competencies demonstrated:
-
-Kubernetes deployments, pods, replica sets, namespaces, and service accounts
-
-Docker containerization and volume management
-
-Hybrid cloud provisioning with GCP and on-prem hypervisors (ProxMox + KVM)
-
-Service mesh implementation with Istio
-
-Persistent storage, network policies, and security management
-
-Monitoring and observability via Prometheus
-
-Declarative infrastructure management using Terraform
-```
 ├── README.md
 ├── Screenshots/                # Visual documentation of all tasks
 │   ├── Deployments/
