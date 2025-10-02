@@ -1,26 +1,24 @@
-## Scope
-Enterprise Kubernetes operations including multi-namespace deployments, bare-metal provisioning, and hybrid cloud architecture.
+⚠️ Note: This repository is for personal reference and portfolio demonstration only. All workflows, manifests, and configurations are original, and not intended for public execution. Unauthorized use is prohibited.
 
-## Environment
-This lab was executed on a modern enterprise Kubernetes and GCP stack, including the following core tools and platforms:
+Overview
 
-Operating Systems: Ubuntu 24.04 LTS, Alpine Linux 3.22
+This repository documents end-to-end enterprise Kubernetes operations, including multi-namespace deployments, hybrid cloud provisioning, and advanced observability. All experiments, manifests, and infrastructure-as-code were designed and executed independently, demonstrating rapid upskilling and application of modern cloud-native practices.
 
-Hypervisor: KVM 8.2.2, ProxMoxVE 9.0.3
+Core competencies demonstrated:
 
-Containerization: Docker 28.3.3
+Kubernetes deployments, pods, replica sets, namespaces, and service accounts
 
-Kubernetes: kubectl 1.33.4, Minikube v1.33.1
+Docker containerization and volume management
 
-Service Mesh: Istio 1.27.0 (demo profile)
+Hybrid cloud provisioning with GCP and on-prem hypervisors (ProxMox + KVM)
 
-Infrastructure as Code: Terraform v1.13.1
+Service mesh implementation with Istio
 
-Cloud Platform: Google Cloud Platform (Compute Engine, Cloud Storage, IAM, Billing, gcloud CLI, Secrets Manager, Firewall)
+Persistent storage, network policies, and security management
 
-Development Tools: Visual Studio Code v1.103.1, YAML manifests, Terraform configuation files
+Monitoring and observability via Prometheus
 
-This environment supports end-to-end experimentation, including cluster provisioning, service deployment, monitoring, storage management, networking, and security validation across multiple namespaces and cloud resources.
+Declarative infrastructure management using Terraform
 ```
 ├── README.md
 ├── Screenshots/                # Visual documentation of all tasks
