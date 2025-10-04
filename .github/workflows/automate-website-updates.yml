@@ -1,4 +1,4 @@
-#This workflow automatically updates my Kubernetes page everytime I update my README.md with additional work completed I want to showcase
+#This workflow automatically updates my Platform Engineering page everytime I update my README.md with additional work completed I want to showcase
 #This is the name of the workflow - used under the Actions tab
 name: Deploy Kubernetes/GCP/TF README.md updates to GitHub pages website
 #This is workflow name - will appear in the list of workflow runs
