@@ -19,7 +19,7 @@ This portfolio demonstrates enterprise-grade Kubernetes and GCP operations throu
 
 ## II. Technical Deep Dive (Proof of Work)
 
-Detailed, timestamped documentation of all operational procedures, troubleshooting steps, and successful validations can be found in the accompanying **[Docs/OPERATIONS_LOG.md](Docs/OPERATIONS_LOG.md)** file.
+Detailed, timestamped documentation of all operational procedures, troubleshooting steps, and successful validations can be found in the accompanying **[OPERATIONS_LOG.md](Docs/OPERATIONS_LOG.md)** file.
 
 ---
 
