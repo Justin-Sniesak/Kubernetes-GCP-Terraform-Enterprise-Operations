@@ -2,9 +2,9 @@
 
 ## 🚀 Overview: Declarative Enterprise Kubernetes Operations
 
-This repository documents four weeks of intense, end-to-end Kubernetes and Cloud Native operations. It serves as a practical demonstration of advanced skills in declarative infrastructure, operational resilience, and hybrid cloud management, directly confirming competencies in all respective domains.
+This project demonstrates end-to-end Kubernetes and GCP platform engineering skills, including IaC, observability, service mesh, and hybrid on-prem/cloud automation.
 
-All experiments were executed independently, resulting in a robust environment spanning **Google Cloud Platform (GCP)** and **On-Premises Hypervisors (ProxMox/KVM)**.
+All experiments were executed independently, resulting in a robust environment spanning Google Cloud Platform (GCP) and On-Premises Hypervisors (ProxMox/KVM).
 
 ---
 
@@ -24,7 +24,18 @@ Detailed, timestamped documentation of all operational procedures, troubleshooti
 
 ---
 
-## III. Repository Structure
+## III. Highlights
+
+* Engineered, automated, and launched a full containerized Prometheus observability stack with service discovery, proactively monitoring metrics and reducing potential Mean Time to Resolution (MTTR) by 50%
+* Architected and standardized a multi-tenant Kubernetes environment across 3 namespaces, supporting 10 distinct applications and enforcing resource quotas via ConfigMaps
+* Automated end-to-end GCP infrastructure deployment via Terraform and service accounts, reducing environment spin-up/tear-down time from 6 hours to 5 minutes while ensuring immutable infrastructure
+* Developed and implemented a full CI/CD pipeline using GitHub Actions, achieving a 100% build success rate and automating the deployment of 2 portfolio sites
+* Secured the platform with an engineered Zero Trust pipeline on GCP, eliminating SSH ingress and defining granular, programmatic role-based access policies
+* Implemented proactive GCP cost optimization measures (billing analysis, resource rightsizing) that realized a 100% on-target adherence in monthly cloud spend over 3 months
+
+---
+
+## IV. Repository Structure
 ```
 ├── README.md
 ├── Screenshots/                # Visual documentation of all tasks
