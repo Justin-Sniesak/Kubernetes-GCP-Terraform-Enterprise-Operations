@@ -1,8 +1,8 @@
 #This workflow automatically updates my Platform Engineering page everytime I update my README.md with additional work completed I want to showcase
 #This is the name of the workflow - used under the Actions tab
-name: Deploy Kubernetes/GCP/TF README.md updates to GitHub pages website
+name: Deploy Platform Engineering README.md updates to GitHub pages website
 #This is workflow name - will appear in the list of workflow runs
-run-name: K8-GCP-TF
+run-name: Platform Engineering
 #Trigger for the workflow - in otherwords, what causes the workflow to kick off
 on:
   push:
