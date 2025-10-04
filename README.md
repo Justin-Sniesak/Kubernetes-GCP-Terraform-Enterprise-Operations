@@ -10,7 +10,7 @@ All experiments were executed independently, resulting in a robust environment s
 
 ## I. Core Competency Showcase
 
-| Pillar | Key Achievement | Demonstrated Expertise |
+| Pillar | Key Achievement | Demonstrated Proficiency |
 | :--- | :--- | :--- |
 | **Hybrid IaC** | Provisioned and tore down compute resources declaratively across GCP and ProxMox using **Terraform**. | GCP (IAM, Billing, Secrets), ProxMox RBAC, Multi-Cloud Automation. |
 | **Resilience & HA** | Engineered and validated self-healing application lifecycle and robust **Persistent Volume (PV/PVC)** storage. | Deployments (Rollbacks, Rollouts), ReplicaSets, Pod Troubleshooting, Stateful Workloads. |
