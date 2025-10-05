@@ -5,7 +5,7 @@ Over 15 distinct troubleshooting events were logged, demonstrating skills in res
 **Summary:** Creating, updating, rolling out, scaling, and troubleshooting Kubernetes deployments. Pod lifecycle managemnent, replication, rollout strategies, annotations, and error handling.
 
 - 2025-08-17 Create deployment manifest, deploy, and validate pod status.
-  ![Dep1-1](Platform-Engineering-Lab/Deployments/Dep1-1.jpg)
+  ![Dep1-1](Deployments/Dep1-1.jpg)
 - 2025-08-17 Validate deployment details.
   ![Dep1-2](Deployments/Dep1-2.jpg)
 - 2025-08-17 Validate auto-scaling of replicas per deployment specifications.
