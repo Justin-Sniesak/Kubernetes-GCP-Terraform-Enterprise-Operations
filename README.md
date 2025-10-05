@@ -12,7 +12,7 @@ This portfolio demonstrates enterprise-grade Kubernetes and GCP operations throu
 | :--- | :--- | :--- |
 | **Hybrid IaC** | Provisioned and tore down compute resources declaratively across GCP and ProxMox using Terraform. | GCP (IAM, Billing, Secrets), ProxMox RBAC, Multi-Cloud Automation. |
 | **Resilience & HA** | Engineered and validated self-healing application lifecycle and robust Persistent Volume (PV/PVC) storage. | Deployments (Rollbacks, Rollouts), ReplicaSets, Pod Troubleshooting, Stateful Workloads. |
-| **Observability & Service Mesh** | Implemented a Service Mesh (Istio) for L7 traffic control and established a comprehensive **Prometheus** observability stack. | Istio Gateways, Service Accounts, Certificate Management, Bash Automation. |
+| **Observability & Service Mesh** | Implemented a Service Mesh (Istio) for L7 traffic control and established a comprehensive Prometheus observability stack. | Istio Gateways, Service Accounts, Certificate Management, Bash Automation. |
 | **Security & Zero Trust** | Eliminated SSH ingress and enforced granular role-based access policies across GCP and Kubernetes. | GCP (Secrets Manager, Service Accounts), Certificate Management, Bash Automation. |
 
 ---
