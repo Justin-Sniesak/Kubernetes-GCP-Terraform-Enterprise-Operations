@@ -294,7 +294,7 @@ Over 15 distinct troubleshooting events were logged, demonstrating skills in res
   ![SA1-3](../ServiceAccounts/SA1-3.jpg)
 - 2025-08-23: Install jq locally to view the decoded token JSON; check exp and iat values to confirm token expiration is set for one year.
   ![SA1-4](../ServiceAccounts/SA1-4.jpg)
-- 2025-08-23 (TROUBLESHOOTING): Manifest not creating service account or pod; updated the manifest on the node, deleted the pod, re-applied the manifest, validated creation.
+- 2025-08-23 TROUBLESHOOTING: Manifest not creating service account or pod; updated the manifest on the node, deleted the pod, re-applied the manifest, validated creation.
   ![SA1-5](../ServiceAccounts/SA1-5.jpg)
 
 ## Storage
