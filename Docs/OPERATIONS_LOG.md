@@ -210,33 +210,33 @@ Over 15 distinct troubleshooting events were logged, demonstrating skills in res
 ![pod1-2](../Pods/pod1-2.jpg)
 - 2025-08-16: Create pod manifests, validate formatting, spacing, and content correctness.
 ![pod1-3](../Pods/pod1-3.jpg)
-2025-08-16: TROUBLESHOOTING: Resolve a pod not starting due to a crash loop.
+- 2025-08-16: TROUBLESHOOTING: Resolve a pod not starting due to a crash loop.
 ![pod1-4](../Pods/pod1-4.jpg)
-2025-08-16: TROUBLESHOOTING: Fix pod with the wrong image defined in the manifest.
+- 2025-08-16: TROUBLESHOOTING: Fix pod with the wrong image defined in the manifest.
 ![pod1-5](../Pods/pod1-5.jpg)
-2025-08-16: TROUBLESHOOTING: Correct pod with incorrect image version.
+- 2025-08-16: TROUBLESHOOTING: Correct pod with incorrect image version.
 ![pod1-6](../Pods/pod1-6.jpg)
-2025-08-16: Describe running pods and review start processes for all pods.
+- 2025-08-16: Describe running pods and review start processes for all pods.
 ![pod1-7](../Pods/pod1-7.jpg)
-2025-08-16: Create multiple pods via manifest, start them, validate 3/3 are running.
+- 2025-08-16: Create multiple pods via manifest, start them, validate 3/3 are running.
 ![pod1-8](../Pods/pod1-8.jpg)
-2025-08-16: Delete all pods and confirm none remain on the node.
+- 2025-08-16: Delete all pods and confirm none remain on the node.
 ![pod1-9](../Pods/pod1-9.jpg)
-2025-08-23: TROUBLESHOOTING: Correct pod creation failure due to DockerHub image name mismatch.
+- 2025-08-23: TROUBLESHOOTING: Correct pod creation failure due to DockerHub image name mismatch.
 ![pod1-10](../Pods/pod1-10.jpg)
-2025-08-23: TROUBLESHOOTING: Resolve Prometheus pod failing to start due to incorrect image.
+- 2025-08-23: TROUBLESHOOTING: Resolve Prometheus pod failing to start due to incorrect image.
 ![pod1-11](../Pods/pod1-11.jpg)
-2025-08-23: Validate all available Kubernetes API resources on the node.
+- 2025-08-23: Validate all available Kubernetes API resources on the node.
 ![pod1-12](../Pods/pod1-12.jpg)
-2025-08-29: Write and deploy Praqma pod manifest, validate pod is running.
+- 2025-08-29: Write and deploy Praqma pod manifest, validate pod is running.
 ![pod1-13](../Pods/pod1-13.jpg)
-2025-09-01: Create Golang pod from manifest, validate running state, connect via exec -it, and confirm hostPath volume is writing data.
+- 2025-09-01: Create Golang pod from manifest, validate running state, connect via exec -it, and confirm hostPath volume is writing data.
 ![pod1-14](../Pods/pod1-14.jpg)
-2025-09-01: Describe Golang pod to confirm hostPath volume mount and configuration.
+- 2025-09-01: Describe Golang pod to confirm hostPath volume mount and configuration.
 ![pod1-15](../Pods/pod1-15.jpg)
-2025-09-02: Validate pod label selectors properly filter and sort pods by assigned labels.
+- 2025-09-02: Validate pod label selectors properly filter and sort pods by assigned labels.
 ![pod1-16](../Pods/pod1-16.jpg)
-2025-09-07: Create config map for prometheus in monitoring namespace.
+- 2025-09-07: Create config map for prometheus in monitoring namespace.
 ![pod1-17](../Pods/pod1-17.jpg)
 
 ## Prometheus
