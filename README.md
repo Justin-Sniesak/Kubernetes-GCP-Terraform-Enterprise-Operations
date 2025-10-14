@@ -42,6 +42,7 @@ Detailed, timestamped documentation of all operational procedures, troubleshooti
 ## IV. Repository Structure
 ```
 ├── README.md
+├── story.md
 ├── Artifacts/                # Visual documentation of all tasks
 │   ├── Deployments/
 │   ├── Docker/
