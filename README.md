@@ -74,7 +74,7 @@ Detailed, timestamped documentation of all operational procedures, troubleshooti
 ├── ReplicaSets/                 # ReplicaSet manifests, pod scaling, HA validation
 ├── Security/                    # Certificates, JSON keys, Kubernetes secrets
 ├── ServiceAccounts/             # Service account creation, JWT retrieval, pod attachment
-├── Scripts/                     # Bash scripting to automate Prometheus, Grafana and Kubernetes deployments and administration
+├── Scripts/                     # Bash scripting to automate Prometheus Kubernetes deployments and administration
 ├── Storage/                     # PersistentVolume (PV) and PersistentVolumeClaim (PVC) creation & validation
 └── Terraform/                   # Terraform manifests, IaC & troubleshooting
 ```
