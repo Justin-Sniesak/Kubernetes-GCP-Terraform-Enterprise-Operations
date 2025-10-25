@@ -2,7 +2,7 @@
 
 ## 🚀 Overview: Declarative Enterprise Kubernetes Operations
 
-This portfolio demonstrates enterprise-grade Kubernetes and GCP operations through IaC, observability, service mesh, and hybrid automation — reducing operational overhead, accelerating deployment velocity, and optimizing cloud costs.
+This SRE portfolio demonstrates enterprise-grade operations using Terraform, Kubernetes, Prometheus, Istio, and GCP. It focuses on IaC, security, and hybrid automation—reducing operational overhead, accelerating deployment velocity, and optimizing cloud costs.
 
 ---
 
@@ -29,9 +29,9 @@ Detailed, timestamped documentation of all operational procedures, troubleshooti
 
 * **Reduced infra provisioning time by 99% (6h → 5m)** via automated Terraform deployment.
 
-* **Standardized multi-tenant Kubernetes across 3 namespaces**, enabling isolated environments for 10+ apps.
+* Standardized **multi-tenant Kubernetes across 3 namespaces** for 10+ isolated applications.
 
-* **Delivered 100% CI/CD pipeline success rate with GitHub Actions**, automating portfolio deployments.
+* Achieved **100% CI/CD pipeline success** rate using GitHub Actions for automated deployments.
 
 * **Secured the platform with Zero Trust** (no SSH ingress, granular RBAC).
 
